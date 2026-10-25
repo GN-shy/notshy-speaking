@@ -1,0 +1,4524 @@
+{
+  "version": "2026.10.22",
+  "source": "2026年9-12月最新雅思口语题库-1022.pdf",
+  "source_sha256": "0d02d724cbf3dc98e8d29c8c9f24dc38e0e5f2ba159da2de210573fb0b4a2331",
+  "source_note": "用户提供的备考题库，非 IELTS 官方发布试题。原题措辞保留，仅合并跨行并统一引号和问号。",
+  "topics": [
+    {
+      "part": 1,
+      "title": "Travelling",
+      "region": "mainland",
+      "category": "new",
+      "page": 5,
+      "questions": [
+        {
+          "text": "What transport do you often use when travelling?",
+          "page": 5,
+          "id": "p1-28dc889db8-q1"
+        },
+        {
+          "text": "Do you often ride a bicycle?",
+          "page": 5,
+          "id": "p1-28dc889db8-q2"
+        },
+        {
+          "text": "Do you prefer to sit by the window when travelling?",
+          "page": 5,
+          "id": "p1-28dc889db8-q3"
+        },
+        {
+          "text": "Did you have a long journey with your family as a child?",
+          "page": 5,
+          "id": "p1-28dc889db8-q4"
+        }
+      ],
+      "id": "p1-28dc889db8"
+    },
+    {
+      "part": 1,
+      "title": "Rubbish and recycling",
+      "region": "mainland",
+      "category": "new",
+      "page": 5,
+      "questions": [
+        {
+          "text": "Did you recycle when you were a kid?",
+          "page": 5,
+          "id": "p1-cddaf7404e-q1"
+        },
+        {
+          "text": "Is waste sorting common in your country?",
+          "page": 5,
+          "id": "p1-cddaf7404e-q2"
+        },
+        {
+          "text": "How do you recycle things like paper and plastic?",
+          "page": 5,
+          "id": "p1-cddaf7404e-q3"
+        },
+        {
+          "text": "What do you do when you see rubbish on the street?",
+          "page": 5,
+          "id": "p1-cddaf7404e-q4"
+        }
+      ],
+      "id": "p1-cddaf7404e"
+    },
+    {
+      "part": 1,
+      "title": "Tiredness",
+      "region": "mainland",
+      "category": "new",
+      "page": 5,
+      "questions": [
+        {
+          "text": "What do you do when you feel tired?",
+          "page": 5,
+          "id": "p1-2245323f7f-q1"
+        },
+        {
+          "text": "When would you feel tired?",
+          "page": 5,
+          "id": "p1-2245323f7f-q2"
+        },
+        {
+          "text": "Do you often feel tired?",
+          "page": 5,
+          "id": "p1-2245323f7f-q3"
+        },
+        {
+          "text": "When you feel tired, do you still go out with your friends?",
+          "page": 5,
+          "id": "p1-2245323f7f-q4"
+        }
+      ],
+      "id": "p1-2245323f7f"
+    },
+    {
+      "part": 1,
+      "title": "Shoes",
+      "region": "mainland",
+      "category": "new",
+      "page": 5,
+      "questions": [
+        {
+          "text": "Which do you prefer, fashionable shoes or comfortable shoes?",
+          "page": 5,
+          "id": "p1-76f468c28c-q1"
+        },
+        {
+          "text": "How much money do you usually spend on shoes?",
+          "page": 5,
+          "id": "p1-76f468c28c-q2"
+        },
+        {
+          "text": "Have you ever bought shoes online?",
+          "page": 6,
+          "id": "p1-76f468c28c-q3"
+        },
+        {
+          "text": "Do you like buying shoes? How often?",
+          "page": 6,
+          "id": "p1-76f468c28c-q4"
+        }
+      ],
+      "id": "p1-76f468c28c"
+    },
+    {
+      "part": 1,
+      "title": "Politeness",
+      "region": "mainland",
+      "category": "new",
+      "page": 6,
+      "questions": [
+        {
+          "text": "What did you do to show your politeness as a child?",
+          "page": 6,
+          "id": "p1-a1942e97c6-q1"
+        },
+        {
+          "text": "On what occasions should we be polite?",
+          "page": 6,
+          "id": "p1-a1942e97c6-q2"
+        },
+        {
+          "text": "Do you think being polite is very important?",
+          "page": 6,
+          "id": "p1-a1942e97c6-q3"
+        },
+        {
+          "text": "How did you learn to be polite as a child?",
+          "page": 6,
+          "id": "p1-a1942e97c6-q4"
+        }
+      ],
+      "id": "p1-a1942e97c6"
+    },
+    {
+      "part": 1,
+      "title": "Fruit and vegetables",
+      "region": "mainland",
+      "category": "new",
+      "page": 6,
+      "questions": [
+        {
+          "text": "Do people in your country like planting vegetables?",
+          "page": 6,
+          "id": "p1-eff44f669e-q1"
+        },
+        {
+          "text": "Were there any kind of fruits and vegetables you disliked as a child?",
+          "page": 6,
+          "id": "p1-eff44f669e-q2"
+        },
+        {
+          "text": "What kind of fruits and vegetables do you dislike?",
+          "page": 6,
+          "id": "p1-eff44f669e-q3"
+        },
+        {
+          "text": "Where do you usually buy fruit and vegetables?",
+          "page": 6,
+          "id": "p1-eff44f669e-q4"
+        },
+        {
+          "text": "How often do you eat fruit and vegetables?",
+          "page": 6,
+          "id": "p1-eff44f669e-q5"
+        }
+      ],
+      "id": "p1-eff44f669e"
+    },
+    {
+      "part": 1,
+      "title": "Advertisement",
+      "region": "mainland",
+      "category": "new",
+      "page": 6,
+      "questions": [
+        {
+          "text": "Do you often see advertisements when you are on your phone or computer?",
+          "page": 6,
+          "id": "p1-b6b63670ac-q1"
+        },
+        {
+          "text": "What kind of advertising do you like?",
+          "page": 6,
+          "id": "p1-b6b63670ac-q2"
+        },
+        {
+          "text": "Do you like advertisements?",
+          "page": 6,
+          "id": "p1-b6b63670ac-q3"
+        },
+        {
+          "text": "Do you see a lot of advertising on trains or other transport?",
+          "page": 6,
+          "id": "p1-b6b63670ac-q4"
+        },
+        {
+          "text": "Is there an advertisement that made an impression on you when you were a child?",
+          "page": 6,
+          "id": "p1-b6b63670ac-q5"
+        },
+        {
+          "text": "Have you ever bought something because of an advertisement?",
+          "page": 6,
+          "id": "p1-b6b63670ac-q6"
+        }
+      ],
+      "id": "p1-b6b63670ac"
+    },
+    {
+      "part": 1,
+      "title": "Paper",
+      "region": "mainland",
+      "category": "new",
+      "page": 6,
+      "questions": [
+        {
+          "text": "Do you carry paper and pens with you when you go out?",
+          "page": 6,
+          "id": "p1-69d3fa52a2-q1"
+        },
+        {
+          "text": "Do people still keep handwritten letters today?",
+          "page": 6,
+          "id": "p1-69d3fa52a2-q2"
+        },
+        {
+          "text": "Do you still write physical letters?",
+          "page": 6,
+          "id": "p1-69d3fa52a2-q3"
+        },
+        {
+          "text": "What did you like to do with paper as a child?",
+          "page": 6,
+          "id": "p1-69d3fa52a2-q4"
+        },
+        {
+          "text": "Have you made any crafts with paper?",
+          "page": 6,
+          "id": "p1-69d3fa52a2-q5"
+        }
+      ],
+      "id": "p1-69d3fa52a2"
+    },
+    {
+      "part": 1,
+      "title": "Secondary school",
+      "region": "mainland",
+      "category": "new",
+      "page": 6,
+      "questions": [
+        {
+          "text": "Is there anything you miss about your secondary school?",
+          "page": 6,
+          "id": "p1-55cf59101d-q1"
+        },
+        {
+          "text": "What was your favourite subject at secondary school?",
+          "page": 6,
+          "id": "p1-55cf59101d-q2"
+        },
+        {
+          "text": "Were there any subjects that you found difficult at secondary school?",
+          "page": 6,
+          "id": "p1-55cf59101d-q3"
+        },
+        {
+          "text": "Do you remember your first day at secondary school?",
+          "page": 7,
+          "id": "p1-55cf59101d-q4"
+        }
+      ],
+      "id": "p1-55cf59101d"
+    },
+    {
+      "part": 1,
+      "title": "Name",
+      "region": "mainland",
+      "category": "new",
+      "page": 7,
+      "questions": [
+        {
+          "text": "Do you often forget people's names?",
+          "page": 7,
+          "id": "p1-6e124d66a9-q1"
+        },
+        {
+          "text": "How do you feel when people can't remember your name?",
+          "page": 7,
+          "id": "p1-6e124d66a9-q2"
+        },
+        {
+          "text": "How do you remember people's names?",
+          "page": 7,
+          "id": "p1-6e124d66a9-q3"
+        },
+        {
+          "text": "Is it easy for you to remember people's names?",
+          "page": 7,
+          "id": "p1-6e124d66a9-q4"
+        }
+      ],
+      "id": "p1-6e124d66a9"
+    },
+    {
+      "part": 1,
+      "title": "Opportunities",
+      "region": "mainland",
+      "category": "new",
+      "page": 7,
+      "questions": [
+        {
+          "text": "Do you often get new opportunities?",
+          "page": 7,
+          "id": "p1-22deb7e0a1-q1"
+        },
+        {
+          "text": "Do you like taking on new opportunities?",
+          "page": 7,
+          "id": "p1-22deb7e0a1-q2"
+        },
+        {
+          "text": "Should people try as many different things as they can?",
+          "page": 7,
+          "id": "p1-22deb7e0a1-q3"
+        },
+        {
+          "text": "Did you have any opportunities to take part in new activities as a child?",
+          "page": 7,
+          "id": "p1-22deb7e0a1-q4"
+        }
+      ],
+      "id": "p1-22deb7e0a1"
+    },
+    {
+      "part": 2,
+      "title": "对结果开心的重要决定",
+      "region": "mainland",
+      "category": "new",
+      "page": 7,
+      "prompt": "Describe a time you made an important decision and were happy with the result",
+      "bullets": [
+        "What the decision was",
+        "Why you made the decision",
+        "How easy it was for you to make the decision",
+        "And explain why you were happy with the result"
+      ],
+      "part3": [
+        {
+          "text": "Which is better, to make a decision quickly or slowly?",
+          "page": 7,
+          "id": "p2-df19436a35-p3-1"
+        },
+        {
+          "text": "Do you think most people's decisions are made in their 20s?",
+          "page": 7,
+          "id": "p2-df19436a35-p3-2"
+        },
+        {
+          "text": "What if people in a group have different opinions on a decision?",
+          "page": 7,
+          "id": "p2-df19436a35-p3-3"
+        },
+        {
+          "text": "What little decisions do people make every day?",
+          "page": 7,
+          "id": "p2-df19436a35-p3-4"
+        },
+        {
+          "text": "Do you think it is a good idea to make a small decision every day?",
+          "page": 7,
+          "id": "p2-df19436a35-p3-5"
+        },
+        {
+          "text": "How can we tell the difference between an important and an easy decision?",
+          "page": 7,
+          "id": "p2-df19436a35-p3-6"
+        }
+      ],
+      "id": "p2-df19436a35"
+    },
+    {
+      "part": 2,
+      "title": "做困难事情并成功的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 8,
+      "prompt": "Describe a person you know who did something difficult and was successful",
+      "bullets": [
+        "Who this person is",
+        "What difficult thing this person did",
+        "Why this person was successful",
+        "And explain how you feel about this person"
+      ],
+      "part3": [
+        {
+          "text": "In which sectors are companies more likely to succeed in China?",
+          "page": 8,
+          "id": "p2-1482098339-p3-1"
+        },
+        {
+          "text": "Is it easy to start up a company?",
+          "page": 8,
+          "id": "p2-1482098339-p3-2"
+        },
+        {
+          "text": "Other than making money, what is more important for a company?",
+          "page": 8,
+          "id": "p2-1482098339-p3-3"
+        },
+        {
+          "text": "Does money equal success?",
+          "page": 8,
+          "id": "p2-1482098339-p3-4"
+        },
+        {
+          "text": "How can companies help protect the environment?",
+          "page": 8,
+          "id": "p2-1482098339-p3-5"
+        },
+        {
+          "text": "Is it difficult to do business in today's world?",
+          "page": 8,
+          "id": "p2-1482098339-p3-6"
+        }
+      ],
+      "id": "p2-1482098339"
+    },
+    {
+      "part": 2,
+      "title": "快乐人士",
+      "region": "mainland",
+      "category": "new",
+      "page": 8,
+      "prompt": "Describe a happy person you know",
+      "bullets": [
+        "Who this person is",
+        "What he/she is like",
+        "How he/she shows happiness",
+        "And explain why you think he/she is a happy person"
+      ],
+      "part3": [
+        {
+          "text": "When do you think people are happiest?",
+          "page": 8,
+          "id": "p2-39bf303dd9-p3-1"
+        },
+        {
+          "text": "How can the arts spread positive emotions in society?",
+          "page": 8,
+          "id": "p2-39bf303dd9-p3-2"
+        },
+        {
+          "text": "Do you think teachers are able to spot the unhappy children?",
+          "page": 8,
+          "id": "p2-39bf303dd9-p3-3"
+        },
+        {
+          "text": "Should teachers know what children are doing all the time?",
+          "page": 8,
+          "id": "p2-39bf303dd9-p3-4"
+        },
+        {
+          "text": "What would make a student happy at school?",
+          "page": 8,
+          "id": "p2-39bf303dd9-p3-5"
+        },
+        {
+          "text": "Do you think doing a job that you like is more important than other things?",
+          "page": 8,
+          "id": "p2-39bf303dd9-p3-6"
+        }
+      ],
+      "id": "p2-39bf303dd9"
+    },
+    {
+      "part": 2,
+      "title": "看过的名人采访",
+      "region": "mainland",
+      "category": "new",
+      "page": 9,
+      "prompt": "Describe a time you watched a famous person being interviewed",
+      "bullets": [
+        "Who the famous person was",
+        "What the interview was about",
+        "When and where you watched the interview",
+        "And explain how you felt about the interview"
+      ],
+      "part3": [
+        {
+          "text": "What should people wear to a job interview?",
+          "page": 9,
+          "id": "p2-5ef035f67c-p3-1"
+        },
+        {
+          "text": "Why do we need to attend interviews when applying for jobs?",
+          "page": 9,
+          "id": "p2-5ef035f67c-p3-2"
+        },
+        {
+          "text": "What should people do to prepare for a job interview?",
+          "page": 9,
+          "id": "p2-5ef035f67c-p3-3"
+        },
+        {
+          "text": "Why do some people think interviews are a waste of time?",
+          "page": 9,
+          "id": "p2-5ef035f67c-p3-4"
+        },
+        {
+          "text": "Why do some people dislike being interviewed?",
+          "page": 9,
+          "id": "p2-5ef035f67c-p3-5"
+        },
+        {
+          "text": "What kinds of people are usually interviewed?",
+          "page": 9,
+          "id": "p2-5ef035f67c-p3-6"
+        }
+      ],
+      "id": "p2-5ef035f67c"
+    },
+    {
+      "part": 2,
+      "title": "有条理的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 9,
+      "prompt": "Describe a person you know who is very organized",
+      "bullets": [
+        "Who this person is",
+        "What this person usually does to stay organized",
+        "In what situations you have noticed this quality",
+        "And explain why you think being organized is important to him/her"
+      ],
+      "part3": [
+        {
+          "text": "Do you think it is important for managers to be well organized?",
+          "page": 9,
+          "id": "p2-f25a80e73f-p3-1"
+        },
+        {
+          "text": "Should parents teach their children to be organized?",
+          "page": 9,
+          "id": "p2-f25a80e73f-p3-2"
+        },
+        {
+          "text": "What can people do to become more organized?",
+          "page": 9,
+          "id": "p2-f25a80e73f-p3-3"
+        },
+        {
+          "text": "Are organized people more likely to be successful at work or in their studies?",
+          "page": 9,
+          "id": "p2-f25a80e73f-p3-4"
+        },
+        {
+          "text": "Do you think children should learn to be organized from a young age?",
+          "page": 9,
+          "id": "p2-f25a80e73f-p3-5"
+        },
+        {
+          "text": "Why is it important for people to be organized?",
+          "page": 9,
+          "id": "p2-f25a80e73f-p3-6"
+        }
+      ],
+      "id": "p2-f25a80e73f"
+    },
+    {
+      "part": 2,
+      "title": "嘈杂地",
+      "region": "mainland",
+      "category": "new",
+      "page": 10,
+      "prompt": "Describe a noisy place you have been to",
+      "bullets": [
+        "Where it is",
+        "When you went there",
+        "What you did there",
+        "And explain why you feel it's a noisy place"
+      ],
+      "part3": [
+        {
+          "text": "How can people consider others' feelings when chatting in public?",
+          "page": 10,
+          "id": "p2-27d6203bd2-p3-1"
+        },
+        {
+          "text": "How would people usually respond to noises in your country?",
+          "page": 10,
+          "id": "p2-27d6203bd2-p3-2"
+        },
+        {
+          "text": "Which area is exposed to noise more, the city or the countryside?",
+          "page": 10,
+          "id": "p2-27d6203bd2-p3-3"
+        },
+        {
+          "text": "What kinds of noises are there in our life?",
+          "page": 10,
+          "id": "p2-27d6203bd2-p3-4"
+        },
+        {
+          "text": "Should children not be allowed to make noise under any circumstances?",
+          "page": 10,
+          "id": "p2-27d6203bd2-p3-5"
+        },
+        {
+          "text": "Do you think it is good for children to make noise?",
+          "page": 10,
+          "id": "p2-27d6203bd2-p3-6"
+        }
+      ],
+      "id": "p2-27d6203bd2"
+    },
+    {
+      "part": 2,
+      "title": "喜欢的城市自然之地",
+      "region": "mainland",
+      "category": "new",
+      "page": 10,
+      "prompt": "Describe a natural place in your city that you enjoy visiting",
+      "bullets": [
+        "Where it is",
+        "What it is like",
+        "How often you go there",
+        "Who you often go there with",
+        "And explain why you enjoy visiting there"
+      ],
+      "part3": [
+        {
+          "text": "Which is more important, protecting the environment or developing the economy?",
+          "page": 10,
+          "id": "p2-1774bf7f04-p3-1"
+        },
+        {
+          "text": "Do you think staying in a natural place would help change people's mood?",
+          "page": 10,
+          "id": "p2-1774bf7f04-p3-2"
+        },
+        {
+          "text": "Do you think there should be many natural places in cities?",
+          "page": 10,
+          "id": "p2-1774bf7f04-p3-3"
+        },
+        {
+          "text": "What can governments do to encourage people to spend more time in nature?",
+          "page": 10,
+          "id": "p2-1774bf7f04-p3-4"
+        },
+        {
+          "text": "Do you think people should spend more time in nature?",
+          "page": 10,
+          "id": "p2-1774bf7f04-p3-5"
+        },
+        {
+          "text": "What kind of people do you think enjoy being in nature?",
+          "page": 10,
+          "id": "p2-1774bf7f04-p3-6"
+        }
+      ],
+      "id": "p2-1774bf7f04"
+    },
+    {
+      "part": 2,
+      "title": "攒钱买特别物品",
+      "region": "mainland",
+      "category": "new",
+      "page": 11,
+      "prompt": "Describe a time when you saved money to buy something special",
+      "bullets": [
+        "What the special thing was",
+        "Why you wanted to buy it",
+        "How you saved money for it",
+        "And explain how you felt after buying it"
+      ],
+      "part3": [
+        {
+          "text": "Should people spend time on charity, or just money?",
+          "page": 11,
+          "id": "p2-0b6d4fb080-p3-1"
+        },
+        {
+          "text": "What kind of things do people usually save money for?",
+          "page": 11,
+          "id": "p2-0b6d4fb080-p3-2"
+        },
+        {
+          "text": "Is it easier to spend money or save money?",
+          "page": 11,
+          "id": "p2-0b6d4fb080-p3-3"
+        },
+        {
+          "text": "Do you think it is easier to teach teenagers how to manage money when they are around 16 or 17 years old?",
+          "page": 11,
+          "id": "p2-0b6d4fb080-p3-4"
+        },
+        {
+          "text": "Should parents teach their children to spend money freely or to save money?",
+          "page": 11,
+          "id": "p2-0b6d4fb080-p3-5"
+        },
+        {
+          "text": "Should schools teach children how to manage money from a young age?",
+          "page": 11,
+          "id": "p2-0b6d4fb080-p3-6"
+        }
+      ],
+      "id": "p2-0b6d4fb080"
+    },
+    {
+      "part": 2,
+      "title": "小时候学到的新技能",
+      "region": "mainland",
+      "category": "new",
+      "page": 11,
+      "prompt": "Describe a new skill you learned when you were a child",
+      "bullets": [
+        "What the skill was",
+        "Who taught you this skill",
+        "How you learned it",
+        "And explain how you felt about learning the skill"
+      ],
+      "part3": [
+        {
+          "text": "Is it important for everyone to have a specialized skill?",
+          "page": 11,
+          "id": "p2-bcefdac1f9-p3-1"
+        },
+        {
+          "text": "Can a child learn skills from another child?",
+          "page": 11,
+          "id": "p2-bcefdac1f9-p3-2"
+        },
+        {
+          "text": "Do you think it is easier for children to learn new skills than for adults?",
+          "page": 11,
+          "id": "p2-bcefdac1f9-p3-3"
+        },
+        {
+          "text": "What are the differences between the way adults learn and the way children learn?",
+          "page": 11,
+          "id": "p2-bcefdac1f9-p3-4"
+        },
+        {
+          "text": "What are the differences between learning in a group and learning by yourself?",
+          "page": 11,
+          "id": "p2-bcefdac1f9-p3-5"
+        },
+        {
+          "text": "What skills should children learn before they go to school?",
+          "page": 11,
+          "id": "p2-bcefdac1f9-p3-6"
+        }
+      ],
+      "id": "p2-bcefdac1f9"
+    },
+    {
+      "part": 2,
+      "title": "喜欢拍照的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 12,
+      "prompt": "Describe a person you know who really likes taking photos",
+      "bullets": [
+        "Who the person is",
+        "When and how you got to know him/her",
+        "Where he/she takes photos",
+        "And explain how you feel about him/her"
+      ],
+      "part3": [
+        {
+          "text": "Some people don't mind others walking into their shot when they're taking photos.",
+          "page": 12,
+          "id": "p2-f87819df10-p3-1"
+        },
+        {
+          "text": "Why do tourists like taking photos while they are travelling?",
+          "page": 12,
+          "id": "p2-f87819df10-p3-2"
+        },
+        {
+          "text": "Do you think it's ok to take photos everywhere?",
+          "page": 12,
+          "id": "p2-f87819df10-p3-3"
+        },
+        {
+          "text": "What kind of photos do people often take?",
+          "page": 12,
+          "id": "p2-f87819df10-p3-4"
+        },
+        {
+          "text": "Why are some people keen on taking photos?",
+          "page": 12,
+          "id": "p2-f87819df10-p3-5"
+        },
+        {
+          "text": "When do people like taking photos?",
+          "page": 12,
+          "id": "p2-f87819df10-p3-6"
+        }
+      ],
+      "id": "p2-f87819df10"
+    },
+    {
+      "part": 2,
+      "title": "尊敬的比你年长的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 12,
+      "prompt": "Describe someone who is older than you that you admire",
+      "bullets": [
+        "Who this person is",
+        "How you knew this person",
+        "What kinds of things you like to do together",
+        "And explain how you feel about this person"
+      ],
+      "part3": [
+        {
+          "text": "What kinds of things do the elderly remember for a long time?",
+          "page": 12,
+          "id": "p2-3280130934-p3-1"
+        },
+        {
+          "text": "What sports are popular among older people?",
+          "page": 12,
+          "id": "p2-3280130934-p3-2"
+        },
+        {
+          "text": "What do old people usually do in their daily life?",
+          "page": 12,
+          "id": "p2-3280130934-p3-3"
+        },
+        {
+          "text": "Why is there a generation gap between the young and the old?",
+          "page": 12,
+          "id": "p2-3280130934-p3-4"
+        },
+        {
+          "text": "Has old people's life quality improved when compared to the past?",
+          "page": 12,
+          "id": "p2-3280130934-p3-5"
+        },
+        {
+          "text": "What can young and old people learn from each other?",
+          "page": 12,
+          "id": "p2-3280130934-p3-6"
+        }
+      ],
+      "id": "p2-3280130934"
+    },
+    {
+      "part": 2,
+      "title": "好的购物服务",
+      "region": "mainland",
+      "category": "new",
+      "page": 13,
+      "prompt": "Describe a time when you received good service in a shop/store/company",
+      "bullets": [
+        "Where the shop/store/company is",
+        "When you went to the shop/store/company",
+        "What service you received from the staff",
+        "And explain how you felt about the service"
+      ],
+      "part3": [
+        {
+          "text": "Can consumption drive economic growth?",
+          "page": 13,
+          "id": "p2-9697bdbd9b-p3-1"
+        },
+        {
+          "text": "What are the advantages and disadvantages of shopping online?",
+          "page": 13,
+          "id": "p2-9697bdbd9b-p3-2"
+        },
+        {
+          "text": "What are the differences between online shopping and in-store shopping?",
+          "page": 13,
+          "id": "p2-9697bdbd9b-p3-3"
+        },
+        {
+          "text": "Why do some people not like shopping in small shops?",
+          "page": 13,
+          "id": "p2-9697bdbd9b-p3-4"
+        },
+        {
+          "text": "What are the advantages and disadvantages of shopping in small shops?",
+          "page": 13,
+          "id": "p2-9697bdbd9b-p3-5"
+        },
+        {
+          "text": "Why are shopping malls so popular in China?",
+          "page": 13,
+          "id": "p2-9697bdbd9b-p3-6"
+        }
+      ],
+      "id": "p2-9697bdbd9b"
+    },
+    {
+      "part": 2,
+      "title": "擅长做手工的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 13,
+      "prompt": "Describe a person who is good at making things by hand",
+      "bullets": [
+        "Who this person is",
+        "What he/she makes",
+        "What materials or technologies he/she uses",
+        "And why you think this person is good at making things by hand"
+      ],
+      "part3": [
+        {
+          "text": "Does art, like music or theater, have an impact on society?",
+          "page": 13,
+          "id": "p2-574445f76b-p3-1"
+        },
+        {
+          "text": "Is it good to have creative people in a team?",
+          "page": 13,
+          "id": "p2-574445f76b-p3-2"
+        },
+        {
+          "text": "What impact can artistic buildings have on society?",
+          "page": 13,
+          "id": "p2-574445f76b-p3-3"
+        },
+        {
+          "text": "Do children these days still like doing arts and crafts?",
+          "page": 13,
+          "id": "p2-574445f76b-p3-4"
+        },
+        {
+          "text": "Why do some children enjoy making things by hand?",
+          "page": 13,
+          "id": "p2-574445f76b-p3-5"
+        },
+        {
+          "text": "Do you think art classes are important for children?",
+          "page": 13,
+          "id": "p2-574445f76b-p3-6"
+        }
+      ],
+      "id": "p2-574445f76b"
+    },
+    {
+      "part": 2,
+      "title": "和朋友度过的愉快夜晚",
+      "region": "mainland",
+      "category": "new",
+      "page": 14,
+      "prompt": "Describe an enjoyable evening you had with your friends",
+      "bullets": [
+        "When and where it was",
+        "What you did",
+        "Who you spent the evening with",
+        "And explain why it was enjoyable"
+      ],
+      "part3": [
+        {
+          "text": "Why do people need friends?",
+          "page": 14,
+          "id": "p2-bfb6a2e83e-p3-1"
+        },
+        {
+          "text": "Do older people prefer spending time with family or with friends?",
+          "page": 14,
+          "id": "p2-bfb6a2e83e-p3-2"
+        },
+        {
+          "text": "Do young people prefer spending time with family or with friends?",
+          "page": 14,
+          "id": "p2-bfb6a2e83e-p3-3"
+        },
+        {
+          "text": "What are the differences between young people's leisure time activities and those of old people?",
+          "page": 14,
+          "id": "p2-bfb6a2e83e-p3-4"
+        },
+        {
+          "text": "What can we do to bring family members closer together?",
+          "page": 14,
+          "id": "p2-bfb6a2e83e-p3-5"
+        },
+        {
+          "text": "How do people get along in a big family?",
+          "page": 14,
+          "id": "p2-bfb6a2e83e-p3-6"
+        }
+      ],
+      "id": "p2-bfb6a2e83e"
+    },
+    {
+      "part": 2,
+      "title": "浪费时间的活动",
+      "region": "mainland",
+      "category": "new",
+      "page": 14,
+      "prompt": "Describe an activity you do regularly that you think is a waste of time",
+      "bullets": [
+        "What it is",
+        "When you usually do it",
+        "Why you do it",
+        "And explain why you think it is a waste of time"
+      ],
+      "part3": [
+        {
+          "text": "Why do some people refuse to abide by rules?",
+          "page": 14,
+          "id": "p2-16f7743d54-p3-1"
+        },
+        {
+          "text": "What kinds of things make people feel pressured?",
+          "page": 14,
+          "id": "p2-16f7743d54-p3-2"
+        },
+        {
+          "text": "Will you continue doing something when you are aware that it's a waste of time?",
+          "page": 14,
+          "id": "p2-16f7743d54-p3-3"
+        },
+        {
+          "text": "How do you balance life and work?",
+          "page": 14,
+          "id": "p2-16f7743d54-p3-4"
+        },
+        {
+          "text": "Is it good to have a daily routine?",
+          "page": 14,
+          "id": "p2-16f7743d54-p3-5"
+        },
+        {
+          "text": "Do you think stress is important in people's lives?",
+          "page": 14,
+          "id": "p2-16f7743d54-p3-6"
+        }
+      ],
+      "id": "p2-16f7743d54"
+    },
+    {
+      "part": 2,
+      "title": "拥挤地方",
+      "region": "mainland",
+      "category": "new",
+      "page": 15,
+      "prompt": "Describe a crowded place you went to",
+      "bullets": [
+        "Where it was",
+        "When you went there",
+        "Who you went there with",
+        "What you did there"
+      ],
+      "part3": [
+        {
+          "text": "Do you think it is a good trend to have more big cities?",
+          "page": 15,
+          "id": "p2-8700034a3c-p3-1"
+        },
+        {
+          "text": "Do you think there are some people who enjoy crowded places?",
+          "page": 15,
+          "id": "p2-8700034a3c-p3-2"
+        },
+        {
+          "text": "Why do people go to crowded places?",
+          "page": 15,
+          "id": "p2-8700034a3c-p3-3"
+        },
+        {
+          "text": "Will people use bikes more or less in cities in the future?",
+          "page": 15,
+          "id": "p2-8700034a3c-p3-4"
+        },
+        {
+          "text": "Will there be more or less green space in cities in the future?",
+          "page": 15,
+          "id": "p2-8700034a3c-p3-5"
+        },
+        {
+          "text": "Which cities are overcrowded in your country?",
+          "page": 15,
+          "id": "p2-8700034a3c-p3-6"
+        }
+      ],
+      "id": "p2-8700034a3c"
+    },
+    {
+      "part": 2,
+      "title": "学习并喜欢历史的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 15,
+      "prompt": "Describe a person who learns history and loves history",
+      "bullets": [
+        "Who this person is",
+        "How he/she learns history",
+        "Why he/she loves history",
+        "And explain how you feel about him/her"
+      ],
+      "part3": [
+        {
+          "text": "Besides big historical events, what else is important when learning history?",
+          "page": 15,
+          "id": "p2-1da94e9e62-p3-1"
+        },
+        {
+          "text": "Do you think people should learn ancient history before learning modern history?",
+          "page": 15,
+          "id": "p2-1da94e9e62-p3-2"
+        },
+        {
+          "text": "Is it important to learn how people in the past lived their lives?",
+          "page": 15,
+          "id": "p2-1da94e9e62-p3-3"
+        },
+        {
+          "text": "How do children learn history before they attend school?",
+          "page": 15,
+          "id": "p2-1da94e9e62-p3-4"
+        },
+        {
+          "text": "At what age do you think people should begin to learn history?",
+          "page": 15,
+          "id": "p2-1da94e9e62-p3-5"
+        },
+        {
+          "text": "Do you think children should begin learning history from an early age?",
+          "page": 15,
+          "id": "p2-1da94e9e62-p3-6"
+        }
+      ],
+      "id": "p2-1da94e9e62"
+    },
+    {
+      "part": 2,
+      "title": "教你新技能的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 16,
+      "prompt": "Describe a person who taught you a new skill",
+      "bullets": [
+        "Who this person was",
+        "What the skill was",
+        "How you learned it",
+        "And explain how you felt about this person"
+      ],
+      "part3": [
+        {
+          "text": "Why is self-discipline important when learning a new skill?",
+          "page": 16,
+          "id": "p2-591cc9c09c-p3-1"
+        },
+        {
+          "text": "What are the differences between learning from a teacher and learning by oneself?",
+          "page": 16,
+          "id": "p2-591cc9c09c-p3-2"
+        },
+        {
+          "text": "How do adults learn a new skill?",
+          "page": 16,
+          "id": "p2-591cc9c09c-p3-3"
+        },
+        {
+          "text": "How can parents and teachers teach children new skills?",
+          "page": 16,
+          "id": "p2-591cc9c09c-p3-4"
+        },
+        {
+          "text": "Where can children learn new skills?",
+          "page": 16,
+          "id": "p2-591cc9c09c-p3-5"
+        },
+        {
+          "text": "Why should children learn new skills?",
+          "page": 16,
+          "id": "p2-591cc9c09c-p3-6"
+        }
+      ],
+      "id": "p2-591cc9c09c"
+    },
+    {
+      "part": 2,
+      "title": "不喜欢的电影",
+      "region": "mainland",
+      "category": "new",
+      "page": 16,
+      "prompt": "Describe a movie/film you don't like",
+      "bullets": [
+        "When you watched it",
+        "Where you watched it",
+        "What it was about",
+        "And explain why don't like it"
+      ],
+      "part3": [
+        {
+          "text": "Do people's movie preferences change as they get older?",
+          "page": 16,
+          "id": "p2-22989ab04a-p3-1"
+        },
+        {
+          "text": "Should documentary films be completely truthful?",
+          "page": 16,
+          "id": "p2-22989ab04a-p3-2"
+        },
+        {
+          "text": "Can movies help people better understand the cultural background of a country?",
+          "page": 16,
+          "id": "p2-22989ab04a-p3-3"
+        },
+        {
+          "text": "Are movies more likely to help people become more creative than books?",
+          "page": 16,
+          "id": "p2-22989ab04a-p3-4"
+        },
+        {
+          "text": "What are the differences between watching movies at home and in a cinema?",
+          "page": 16,
+          "id": "p2-22989ab04a-p3-5"
+        },
+        {
+          "text": "What kinds of movies are the most popular in China?",
+          "page": 16,
+          "id": "p2-22989ab04a-p3-6"
+        }
+      ],
+      "id": "p2-22989ab04a"
+    },
+    {
+      "part": 2,
+      "title": "不喜欢的短途旅行",
+      "region": "mainland",
+      "category": "new",
+      "page": 17,
+      "prompt": "Describe a short trip you often take but do not like",
+      "bullets": [
+        "Where you go",
+        "When you go there",
+        "Why you go there",
+        "And explain why you do not like the trip"
+      ],
+      "part3": [
+        {
+          "text": "What problems does it cause for transportation when everyone commutes at the same time?",
+          "page": 17,
+          "id": "p2-22117579f1-p3-1"
+        },
+        {
+          "text": "What are the benefits of travelling abroad?",
+          "page": 17,
+          "id": "p2-22117579f1-p3-2"
+        },
+        {
+          "text": "Which is better for knowing more about a country? Travelling or reading books about it?",
+          "page": 17,
+          "id": "p2-22117579f1-p3-3"
+        },
+        {
+          "text": "How much time do you think people should spend on a trip abroad?",
+          "page": 17,
+          "id": "p2-22117579f1-p3-4"
+        },
+        {
+          "text": "Who prefers travelling abroad? The young or the old?",
+          "page": 17,
+          "id": "p2-22117579f1-p3-5"
+        },
+        {
+          "text": "Do Chinese people like travelling abroad?",
+          "page": 17,
+          "id": "p2-22117579f1-p3-6"
+        }
+      ],
+      "id": "p2-22117579f1"
+    },
+    {
+      "part": 2,
+      "title": "受欢迎的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 17,
+      "prompt": "Describe a popular person",
+      "bullets": [
+        "Who this person is",
+        "What kind of person he or she is",
+        "When you see him/her normally",
+        "And explain why you think this person is popular"
+      ],
+      "part3": [
+        {
+          "text": "Why do people want to be popular?",
+          "page": 17,
+          "id": "p2-f4882d2e21-p3-1"
+        },
+        {
+          "text": "Is it easier to become popular nowadays?",
+          "page": 17,
+          "id": "p2-f4882d2e21-p3-2"
+        },
+        {
+          "text": "What are the qualities of being a good teacher?",
+          "page": 17,
+          "id": "p2-f4882d2e21-p3-3"
+        },
+        {
+          "text": "Do you think good teachers are always popular among students?",
+          "page": 17,
+          "id": "p2-f4882d2e21-p3-4"
+        },
+        {
+          "text": "Is it important for a teacher to be popular?",
+          "page": 17,
+          "id": "p2-f4882d2e21-p3-5"
+        },
+        {
+          "text": "Why are some students popular in school?",
+          "page": 17,
+          "id": "p2-f4882d2e21-p3-6"
+        }
+      ],
+      "id": "p2-f4882d2e21"
+    },
+    {
+      "part": 2,
+      "title": "钦佩的运动员",
+      "region": "mainland",
+      "category": "new",
+      "page": 17,
+      "prompt": "Describe a successful sportsperson you admire",
+      "bullets": [
+        "Who he/she is",
+        "What you know about him/her",
+        "What he/she is like in real life",
+        "What achievement he/she has made"
+      ],
+      "part3": [
+        {
+          "text": "Why are there so few top athletes?",
+          "page": 18,
+          "id": "p2-6888876b11-p3-1"
+        },
+        {
+          "text": "What is the most popular sport in your country?",
+          "page": 18,
+          "id": "p2-6888876b11-p3-2"
+        },
+        {
+          "text": "Is it easy to identify children's talents?",
+          "page": 18,
+          "id": "p2-6888876b11-p3-3"
+        },
+        {
+          "text": "Is talent important in sports?",
+          "page": 18,
+          "id": "p2-6888876b11-p3-4"
+        },
+        {
+          "text": "What qualities should an athlete have?",
+          "page": 18,
+          "id": "p2-6888876b11-p3-5"
+        },
+        {
+          "text": "Should students have physical education and do sports at school?",
+          "page": 18,
+          "id": "p2-6888876b11-p3-6"
+        }
+      ],
+      "id": "p2-6888876b11"
+    },
+    {
+      "part": 2,
+      "title": "喜欢的公共建筑",
+      "region": "mainland",
+      "category": "new",
+      "page": 18,
+      "prompt": "Describe a public building you enjoy visiting (e.g. a library, a shopping mall, a sports hall, etc.)",
+      "bullets": [
+        "Where it is",
+        "How you knew it",
+        "What it looks like",
+        "And explain why you enjoy visiting it"
+      ],
+      "part3": [
+        {
+          "text": "Why do people visit historic buildings?",
+          "page": 18,
+          "id": "p2-c7291c60fc-p3-1"
+        },
+        {
+          "text": "Should modern buildings replace traditional buildings?",
+          "page": 18,
+          "id": "p2-c7291c60fc-p3-2"
+        },
+        {
+          "text": "Is it better to live in an apartment than in a house?",
+          "page": 18,
+          "id": "p2-c7291c60fc-p3-3"
+        },
+        {
+          "text": "Is it important to protect historic buildings? Why?",
+          "page": 18,
+          "id": "p2-c7291c60fc-p3-4"
+        },
+        {
+          "text": "Why is it hard to protect historic buildings?",
+          "page": 18,
+          "id": "p2-c7291c60fc-p3-5"
+        },
+        {
+          "text": "Why do some people prefer to live in the countryside?",
+          "page": 18,
+          "id": "p2-c7291c60fc-p3-6"
+        }
+      ],
+      "id": "p2-c7291c60fc"
+    },
+    {
+      "part": 2,
+      "title": "印象深刻的聚会",
+      "region": "mainland",
+      "category": "new",
+      "page": 18,
+      "prompt": "Describe a party for a special event that impressed you a lot",
+      "bullets": [
+        "When and where it was held",
+        "What the party was held for",
+        "How many people attended it",
+        "And explain why it impressed you a lot"
+      ],
+      "part3": [
+        {
+          "text": "When do people like to hold a party?",
+          "page": 19,
+          "id": "p2-9d7366dbd8-p3-1"
+        },
+        {
+          "text": "Do you think people nowadays prefer attending big parties or small gatherings with close friends? Why?",
+          "page": 19,
+          "id": "p2-9d7366dbd8-p3-2"
+        },
+        {
+          "text": "Are there any differences between how young people and older people celebrate events with parties?",
+          "page": 19,
+          "id": "p2-9d7366dbd8-p3-3"
+        },
+        {
+          "text": "What special events are celebrated in your country?",
+          "page": 19,
+          "id": "p2-9d7366dbd8-p3-4"
+        },
+        {
+          "text": "Do you think it's a waste of money for governments to celebrate national events?",
+          "page": 19,
+          "id": "p2-9d7366dbd8-p3-5"
+        },
+        {
+          "text": "What festivals are the most important for people in your country?",
+          "page": 19,
+          "id": "p2-9d7366dbd8-p3-6"
+        }
+      ],
+      "id": "p2-9d7366dbd8"
+    },
+    {
+      "part": 2,
+      "title": "有健康习惯和作息的人",
+      "region": "mainland",
+      "category": "new",
+      "page": 19,
+      "prompt": "Describe a person you know who has healthy habits and a healthy daily routine",
+      "bullets": [
+        "Who this person is",
+        "How you got to know each other",
+        "What he/she does to keep this lifestyle",
+        "And explain how you feel about him/her"
+      ],
+      "part3": [
+        {
+          "text": "Does the government play an important role in promoting healthy lifestyles in a community?",
+          "page": 19,
+          "id": "p2-afd2cf3145-p3-1"
+        },
+        {
+          "text": "Do you think it is important to live in a community where people have healthy lifestyles?",
+          "page": 19,
+          "id": "p2-afd2cf3145-p3-2"
+        },
+        {
+          "text": "How can people relieve stress in daily life?",
+          "page": 19,
+          "id": "p2-afd2cf3145-p3-3"
+        },
+        {
+          "text": "What effect does stress have on health?",
+          "page": 19,
+          "id": "p2-afd2cf3145-p3-4"
+        },
+        {
+          "text": "Which group pays more attention to health, young people or old people?",
+          "page": 19,
+          "id": "p2-afd2cf3145-p3-5"
+        }
+      ],
+      "id": "p2-afd2cf3145"
+    },
+    {
+      "part": 2,
+      "title": "读起来开心的书",
+      "region": "mainland",
+      "category": "new",
+      "page": 19,
+      "prompt": "Describe a book you enjoyed reading and that made you happy",
+      "bullets": [
+        "What kind of book it was",
+        "What it was about",
+        "Why you read it",
+        "And explain why it made you happy"
+      ],
+      "part3": [
+        {
+          "text": "What kinds of books are popular in China?",
+          "page": 20,
+          "id": "p2-c516124d8c-p3-1"
+        },
+        {
+          "text": "Do you think people should read the original book before watching the movie?",
+          "page": 20,
+          "id": "p2-c516124d8c-p3-2"
+        },
+        {
+          "text": "Are success books useful to everyone?",
+          "page": 20,
+          "id": "p2-c516124d8c-p3-3"
+        },
+        {
+          "text": "Do you think people today read less than before? Why?",
+          "page": 20,
+          "id": "p2-c516124d8c-p3-4"
+        },
+        {
+          "text": "Why do some people prefer watching movies to reading books?",
+          "page": 20,
+          "id": "p2-c516124d8c-p3-5"
+        },
+        {
+          "text": "How can parents help children develop a love of reading?",
+          "page": 20,
+          "id": "p2-c516124d8c-p3-6"
+        }
+      ],
+      "id": "p2-c516124d8c"
+    },
+    {
+      "part": 2,
+      "title": "帮助他人",
+      "region": "mainland",
+      "category": "new",
+      "page": 20,
+      "prompt": "Describe a time when you helped someone",
+      "bullets": [
+        "Where you helped him/her",
+        "Why you helped",
+        "How you helped",
+        "And explain how you felt about it"
+      ],
+      "part3": [
+        {
+          "text": "Should children be taught to be kind to others?",
+          "page": 20,
+          "id": "p2-172c61b963-p3-1"
+        },
+        {
+          "text": "Should people be very kind when they help others?",
+          "page": 20,
+          "id": "p2-172c61b963-p3-2"
+        },
+        {
+          "text": "Can kids provide any help to parents?",
+          "page": 20,
+          "id": "p2-172c61b963-p3-3"
+        },
+        {
+          "text": "Should parents give children advice? Why?",
+          "page": 20,
+          "id": "p2-172c61b963-p3-4"
+        },
+        {
+          "text": "What kind of advice should parents give to their children?",
+          "page": 20,
+          "id": "p2-172c61b963-p3-5"
+        },
+        {
+          "text": "Should parents help their kids with their homework?",
+          "page": 20,
+          "id": "p2-172c61b963-p3-6"
+        }
+      ],
+      "id": "p2-172c61b963"
+    },
+    {
+      "part": 2,
+      "title": "听不感兴趣的话",
+      "region": "mainland",
+      "category": "new",
+      "page": 20,
+      "prompt": "Describe a time when someone talked about something you were not interested in but you kept listening",
+      "bullets": [
+        "Who the person was",
+        "What he/she talked about",
+        "Why you kept listening",
+        "And explain how you felt about the experience"
+      ],
+      "part3": [
+        {
+          "text": "What kind of topics do young people like to talk about today?",
+          "page": 21,
+          "id": "p2-d064b16b06-p3-1"
+        },
+        {
+          "text": "What would happen if the listener didn't listen carefully?",
+          "page": 21,
+          "id": "p2-d064b16b06-p3-2"
+        },
+        {
+          "text": "How can we tell if a listener is listening carefully?",
+          "page": 21,
+          "id": "p2-d064b16b06-p3-3"
+        },
+        {
+          "text": "How can a teacher tell if students are listening in class?",
+          "page": 21,
+          "id": "p2-d064b16b06-p3-4"
+        },
+        {
+          "text": "What do you think about talking with people who have different opinions?",
+          "page": 21,
+          "id": "p2-d064b16b06-p3-5"
+        },
+        {
+          "text": "Do most young people in your country like to talk with elderly people?",
+          "page": 21,
+          "id": "p2-d064b16b06-p3-6"
+        }
+      ],
+      "id": "p2-d064b16b06"
+    },
+    {
+      "part": 2,
+      "title": "不会用的科技产品",
+      "region": "mainland",
+      "category": "new",
+      "page": 21,
+      "prompt": "Describe a piece of technology that you didn't know how to use (e.g. a computer, a smartphone, etc.)",
+      "bullets": [
+        "What it was",
+        "Why you didn't know how to use it",
+        "Whether you learned to use it at last",
+        "And explain how you felt about it"
+      ],
+      "part3": [
+        {
+          "text": "Are there any disadvantages of using technology?",
+          "page": 21,
+          "id": "p2-b0587ee972-p3-1"
+        },
+        {
+          "text": "Do you think it is good to use technology in education?",
+          "page": 21,
+          "id": "p2-b0587ee972-p3-2"
+        }
+      ],
+      "id": "p2-b0587ee972"
+    },
+    {
+      "part": 2,
+      "title": "有创造力的朋友",
+      "region": "mainland",
+      "category": "new",
+      "page": 21,
+      "prompt": "Describe a friend of yours who is creative",
+      "bullets": [
+        "Who he/she is",
+        "How you met him/her",
+        "What materials he/she uses when making things by hand",
+        "And explain why you think he/she is a creative person"
+      ],
+      "part3": [
+        {
+          "text": "Do you think art classes are important for children?",
+          "page": 22,
+          "id": "p2-6554be7cbc-p3-1"
+        },
+        {
+          "text": "Do you think creativity is important for everyone?",
+          "page": 22,
+          "id": "p2-6554be7cbc-p3-2"
+        },
+        {
+          "text": "Does creativity come from nature or nurture?",
+          "page": 22,
+          "id": "p2-6554be7cbc-p3-3"
+        },
+        {
+          "text": "Do you think there are too many advertisements on TV in your country?",
+          "page": 22,
+          "id": "p2-6554be7cbc-p3-4"
+        },
+        {
+          "text": "Do you have a favourite advertisement?",
+          "page": 22,
+          "id": "p2-6554be7cbc-p3-5"
+        },
+        {
+          "text": "Have you ever bought something because of an advertisement?",
+          "page": 22,
+          "id": "p2-6554be7cbc-p3-6"
+        }
+      ],
+      "id": "p2-6554be7cbc"
+    },
+    {
+      "part": 1,
+      "title": "Music",
+      "region": "mainland",
+      "category": "retained",
+      "page": 22,
+      "questions": [
+        {
+          "text": "Do you prefer sad or happy music?",
+          "page": 22,
+          "id": "p1-4669d407e3-q1"
+        },
+        {
+          "text": "Does happy music make you feel more excited?",
+          "page": 22,
+          "id": "p1-4669d407e3-q2"
+        },
+        {
+          "text": "Have you taken any music classes?",
+          "page": 22,
+          "id": "p1-4669d407e3-q3"
+        },
+        {
+          "text": "Do you listen to music while doing other things?",
+          "page": 22,
+          "id": "p1-4669d407e3-q4"
+        }
+      ],
+      "id": "p1-4669d407e3"
+    },
+    {
+      "part": 1,
+      "title": "Teachers",
+      "region": "mainland",
+      "category": "retained",
+      "page": 22,
+      "questions": [
+        {
+          "text": "Do you have a favorite teacher?",
+          "page": 22,
+          "id": "p1-d6c917a0c3-q1"
+        },
+        {
+          "text": "Do you want to be a teacher in the future?",
+          "page": 22,
+          "id": "p1-d6c917a0c3-q2"
+        },
+        {
+          "text": "Do you have a teacher from your past that you still remember?",
+          "page": 22,
+          "id": "p1-d6c917a0c3-q3"
+        },
+        {
+          "text": "Are you still in touch with your primary school teachers?",
+          "page": 22,
+          "id": "p1-d6c917a0c3-q4"
+        },
+        {
+          "text": "In what way has your favourite teacher helped you?",
+          "page": 22,
+          "id": "p1-d6c917a0c3-q5"
+        },
+        {
+          "text": "Do you like your primary school teachers more than your high school teachers?",
+          "page": 22,
+          "id": "p1-d6c917a0c3-q6"
+        }
+      ],
+      "id": "p1-d6c917a0c3"
+    },
+    {
+      "part": 1,
+      "title": "Social media",
+      "region": "mainland",
+      "category": "retained",
+      "page": 22,
+      "questions": [
+        {
+          "text": "Have you ever posted anything on social media?",
+          "page": 22,
+          "id": "p1-fc6572d2a0-q1"
+        },
+        {
+          "text": "When did you start using social media?",
+          "page": 22,
+          "id": "p1-fc6572d2a0-q2"
+        },
+        {
+          "text": "Do you think you spend too much time on social media?",
+          "page": 22,
+          "id": "p1-fc6572d2a0-q3"
+        },
+        {
+          "text": "Do your friends use social media?",
+          "page": 22,
+          "id": "p1-fc6572d2a0-q4"
+        },
+        {
+          "text": "What do people often do on social media?",
+          "page": 22,
+          "id": "p1-fc6572d2a0-q5"
+        }
+      ],
+      "id": "p1-fc6572d2a0"
+    },
+    {
+      "part": 1,
+      "title": "Tidiness",
+      "region": "mainland",
+      "category": "retained",
+      "page": 23,
+      "questions": [
+        {
+          "text": "Do you like to keep things tidy?",
+          "page": 23,
+          "id": "p1-b996633ee6-q1"
+        },
+        {
+          "text": "Did you keep your room tidy as a child?",
+          "page": 23,
+          "id": "p1-b996633ee6-q2"
+        },
+        {
+          "text": "How do you keep your work or study space tidy?",
+          "page": 23,
+          "id": "p1-b996633ee6-q3"
+        },
+        {
+          "text": "Do you think that it is necessary to be tidy?",
+          "page": 23,
+          "id": "p1-b996633ee6-q4"
+        },
+        {
+          "text": "Do you think there are people who can always stay tidy?",
+          "page": 23,
+          "id": "p1-b996633ee6-q5"
+        },
+        {
+          "text": "What do you think of the people who are not very tidy?",
+          "page": 23,
+          "id": "p1-b996633ee6-q6"
+        }
+      ],
+      "id": "p1-b996633ee6"
+    },
+    {
+      "part": 1,
+      "title": "Websites",
+      "region": "mainland",
+      "category": "retained",
+      "page": 23,
+      "questions": [
+        {
+          "text": "What kinds of websites do you often visit?",
+          "page": 23,
+          "id": "p1-a9548a096f-q1"
+        },
+        {
+          "text": "What is your favourite website?",
+          "page": 23,
+          "id": "p1-a9548a096f-q2"
+        },
+        {
+          "text": "Are there any changes to the websites you often visit?",
+          "page": 23,
+          "id": "p1-a9548a096f-q3"
+        },
+        {
+          "text": "What kinds of websites are popular in your country?",
+          "page": 23,
+          "id": "p1-a9548a096f-q4"
+        },
+        {
+          "text": "Do you prefer getting information from websites or books?",
+          "page": 23,
+          "id": "p1-a9548a096f-q5"
+        },
+        {
+          "text": "Would you like to have your own website?",
+          "page": 23,
+          "id": "p1-a9548a096f-q6"
+        },
+        {
+          "text": "What have you learned from websites that help with your life or studies?",
+          "page": 23,
+          "id": "p1-a9548a096f-q7"
+        }
+      ],
+      "id": "p1-a9548a096f"
+    },
+    {
+      "part": 1,
+      "title": "Watch",
+      "region": "mainland",
+      "category": "retained",
+      "page": 23,
+      "questions": [
+        {
+          "text": "Do you wear a watch?",
+          "page": 23,
+          "id": "p1-e081b1c6a3-q1"
+        },
+        {
+          "text": "Have you ever got a watch as a gift?",
+          "page": 23,
+          "id": "p1-e081b1c6a3-q2"
+        },
+        {
+          "text": "Why do some people wear expensive watches?",
+          "page": 23,
+          "id": "p1-e081b1c6a3-q3"
+        },
+        {
+          "text": "Do you think it is important to wear a watch? Why?",
+          "page": 23,
+          "id": "p1-e081b1c6a3-q4"
+        }
+      ],
+      "id": "p1-e081b1c6a3"
+    },
+    {
+      "part": 1,
+      "title": "Shopping",
+      "region": "mainland",
+      "category": "retained",
+      "page": 23,
+      "questions": [
+        {
+          "text": "Do you like shopping?",
+          "page": 23,
+          "id": "p1-575fd03fe4-q1"
+        },
+        {
+          "text": "How often do you go shopping?",
+          "page": 23,
+          "id": "p1-575fd03fe4-q2"
+        },
+        {
+          "text": "Do you prefer online shopping or in-store shopping?",
+          "page": 23,
+          "id": "p1-575fd03fe4-q3"
+        },
+        {
+          "text": "Have you ever returned anything you bought online?",
+          "page": 23,
+          "id": "p1-575fd03fe4-q4"
+        }
+      ],
+      "id": "p1-575fd03fe4"
+    },
+    {
+      "part": 1,
+      "title": "Cars",
+      "region": "mainland",
+      "category": "retained",
+      "page": 23,
+      "questions": [
+        {
+          "text": "Did you enjoy traveling by car when you were a kid?",
+          "page": 23,
+          "id": "p1-e5bcd3ee43-q1"
+        },
+        {
+          "text": "What types of cars do you like?",
+          "page": 23,
+          "id": "p1-e5bcd3ee43-q2"
+        },
+        {
+          "text": "Do you prefer to be a driver or a passenger?",
+          "page": 23,
+          "id": "p1-e5bcd3ee43-q3"
+        },
+        {
+          "text": "What do you usually do when there is a traffic jam?",
+          "page": 23,
+          "id": "p1-e5bcd3ee43-q4"
+        },
+        {
+          "text": "Do you think car colours are important?",
+          "page": 24,
+          "id": "p1-e5bcd3ee43-q5"
+        },
+        {
+          "text": "Will you buy an expensive car in the future?",
+          "page": 24,
+          "id": "p1-e5bcd3ee43-q6"
+        }
+      ],
+      "id": "p1-e5bcd3ee43"
+    },
+    {
+      "part": 1,
+      "title": "Public gardens and parks",
+      "region": "mainland",
+      "category": "retained",
+      "page": 24,
+      "questions": [
+        {
+          "text": "Did you like going to parks as a child?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q1"
+        },
+        {
+          "text": "Do you still like going to parks now?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q2"
+        },
+        {
+          "text": "Would you like to see more parks in your city?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q3"
+        },
+        {
+          "text": "Are there any parks you want to go to in the future?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q4"
+        },
+        {
+          "text": "Would you prefer to play in a personal garden or public garden?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q5"
+        },
+        {
+          "text": "How are the parks today different from those you visited as a kid?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q6"
+        },
+        {
+          "text": "What do you like to do when visiting a park?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q7"
+        },
+        {
+          "text": "Would you like to play in a public garden or park?",
+          "page": 24,
+          "id": "p1-3a6c959a58-q8"
+        }
+      ],
+      "id": "p1-3a6c959a58"
+    },
+    {
+      "part": 1,
+      "title": "Science",
+      "region": "mainland",
+      "category": "retained",
+      "page": 24,
+      "questions": [
+        {
+          "text": "Do you like science?",
+          "page": 24,
+          "id": "p1-156cb8dd47-q1"
+        },
+        {
+          "text": "When did you start to learn about science?",
+          "page": 24,
+          "id": "p1-156cb8dd47-q2"
+        },
+        {
+          "text": "Which science subject is interesting to you?",
+          "page": 24,
+          "id": "p1-156cb8dd47-q3"
+        },
+        {
+          "text": "What kinds of interesting things have you done with science?",
+          "page": 24,
+          "id": "p1-156cb8dd47-q4"
+        },
+        {
+          "text": "Do you like watching science TV programs?",
+          "page": 24,
+          "id": "p1-156cb8dd47-q5"
+        },
+        {
+          "text": "Do Chinese people often visit science museums?",
+          "page": 24,
+          "id": "p1-156cb8dd47-q6"
+        }
+      ],
+      "id": "p1-156cb8dd47"
+    },
+    {
+      "part": 1,
+      "title": "Mirrors",
+      "region": "mainland",
+      "category": "retained",
+      "page": 24,
+      "questions": [
+        {
+          "text": "Do you like looking at yourself in the mirror? How often?",
+          "page": 24,
+          "id": "p1-ce3ede2e83-q1"
+        },
+        {
+          "text": "Have you ever bought mirrors?",
+          "page": 24,
+          "id": "p1-ce3ede2e83-q2"
+        },
+        {
+          "text": "Do you usually take a mirror with you?",
+          "page": 24,
+          "id": "p1-ce3ede2e83-q3"
+        },
+        {
+          "text": "Would you use mirrors to decorate your room?",
+          "page": 24,
+          "id": "p1-ce3ede2e83-q4"
+        }
+      ],
+      "id": "p1-ce3ede2e83"
+    },
+    {
+      "part": 1,
+      "title": "Outer space and stars",
+      "region": "mainland",
+      "category": "retained",
+      "page": 24,
+      "questions": [
+        {
+          "text": "Have you ever learnt about outer space and stars?",
+          "page": 24,
+          "id": "p1-a83a413e16-q1"
+        },
+        {
+          "text": "Do you like science fiction movies? Why?",
+          "page": 24,
+          "id": "p1-a83a413e16-q2"
+        },
+        {
+          "text": "Do you want to know more about outer space?",
+          "page": 24,
+          "id": "p1-a83a413e16-q3"
+        },
+        {
+          "text": "Do you want to go into outer space in the future?",
+          "page": 24,
+          "id": "p1-a83a413e16-q4"
+        }
+      ],
+      "id": "p1-a83a413e16"
+    },
+    {
+      "part": 1,
+      "title": "Singing",
+      "region": "mainland",
+      "category": "retained",
+      "page": 25,
+      "questions": [
+        {
+          "text": "Do you like singing? Why?",
+          "page": 25,
+          "id": "p1-069f02ce22-q1"
+        },
+        {
+          "text": "Have you ever learnt how to sing?",
+          "page": 25,
+          "id": "p1-069f02ce22-q2"
+        },
+        {
+          "text": "Who do you want to sing for?",
+          "page": 25,
+          "id": "p1-069f02ce22-q3"
+        },
+        {
+          "text": "Do you think singing can bring happiness to people?",
+          "page": 25,
+          "id": "p1-069f02ce22-q4"
+        },
+        {
+          "text": "Do you like listening to others singing?",
+          "page": 25,
+          "id": "p1-069f02ce22-q5"
+        },
+        {
+          "text": "Have you ever taken a singing class?",
+          "page": 25,
+          "id": "p1-069f02ce22-q6"
+        }
+      ],
+      "id": "p1-069f02ce22"
+    },
+    {
+      "part": 1,
+      "title": "Clothing",
+      "region": "mainland",
+      "category": "retained",
+      "page": 25,
+      "questions": [
+        {
+          "text": "What kind of clothes do you like to wear?",
+          "page": 25,
+          "id": "p1-e8d8b00c45-q1"
+        },
+        {
+          "text": "Do you prefer to wear comfortable and casual clothes or smart clothes?",
+          "page": 25,
+          "id": "p1-e8d8b00c45-q2"
+        },
+        {
+          "text": "Do you like wearing T-shirts?",
+          "page": 25,
+          "id": "p1-e8d8b00c45-q3"
+        },
+        {
+          "text": "Do you spend a lot of time choosing clothes?",
+          "page": 25,
+          "id": "p1-e8d8b00c45-q4"
+        },
+        {
+          "text": "Do you wear different styles of clothes on weekdays and weekends?",
+          "page": 25,
+          "id": "p1-e8d8b00c45-q5"
+        },
+        {
+          "text": "What colour clothes do you like?",
+          "page": 25,
+          "id": "p1-e8d8b00c45-q6"
+        }
+      ],
+      "id": "p1-e8d8b00c45"
+    },
+    {
+      "part": 1,
+      "title": "Jokes & Comedies",
+      "region": "mainland",
+      "category": "retained",
+      "page": 25,
+      "questions": [
+        {
+          "text": "Are you good at telling jokes?",
+          "page": 25,
+          "id": "p1-06cb6a3485-q1"
+        },
+        {
+          "text": "Do your friends like to tell jokes?",
+          "page": 25,
+          "id": "p1-06cb6a3485-q2"
+        },
+        {
+          "text": "Do you like to watch comedies?",
+          "page": 25,
+          "id": "p1-06cb6a3485-q3"
+        },
+        {
+          "text": "Have you ever watched a live show?",
+          "page": 25,
+          "id": "p1-06cb6a3485-q4"
+        },
+        {
+          "text": "Are comedy shows popular in your country?",
+          "page": 25,
+          "id": "p1-06cb6a3485-q5"
+        }
+      ],
+      "id": "p1-06cb6a3485"
+    },
+    {
+      "part": 1,
+      "title": "Headphones",
+      "region": "mainland",
+      "category": "retained",
+      "page": 25,
+      "questions": [
+        {
+          "text": "Do you use headphones?",
+          "page": 25,
+          "id": "p1-f881e97abe-q1"
+        },
+        {
+          "text": "What type of headphones do you use?",
+          "page": 25,
+          "id": "p1-f881e97abe-q2"
+        },
+        {
+          "text": "When would you use headphones?",
+          "page": 25,
+          "id": "p1-f881e97abe-q3"
+        },
+        {
+          "text": "In what conditions would you not use headphones?",
+          "page": 25,
+          "id": "p1-f881e97abe-q4"
+        },
+        {
+          "text": "Is wearing headphones comfortable?",
+          "page": 25,
+          "id": "p1-f881e97abe-q5"
+        }
+      ],
+      "id": "p1-f881e97abe"
+    },
+    {
+      "part": 1,
+      "title": "Morning time",
+      "region": "mainland",
+      "category": "retained",
+      "page": 25,
+      "questions": [
+        {
+          "text": "Do you spend your mornings doing the same things on both weekends and weekdays? Why?",
+          "page": 25,
+          "id": "p1-65e748fb07-q1"
+        },
+        {
+          "text": "Are there any differences between what you do in the morning now and what you did in the past?",
+          "page": 25,
+          "id": "p1-65e748fb07-q2"
+        },
+        {
+          "text": "What did you do in the morning when you were little? Why?",
+          "page": 26,
+          "id": "p1-65e748fb07-q3"
+        },
+        {
+          "text": "What do you usually do in the morning?",
+          "page": 26,
+          "id": "p1-65e748fb07-q4"
+        },
+        {
+          "text": "Do you like getting up early in the morning?",
+          "page": 26,
+          "id": "p1-65e748fb07-q5"
+        }
+      ],
+      "id": "p1-65e748fb07"
+    },
+    {
+      "part": 1,
+      "title": "Work or studies",
+      "region": "mainland",
+      "category": "evergreen",
+      "page": 26,
+      "questions": [
+        {
+          "text": "What subjects are you studying?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q1",
+          "branch": "student"
+        },
+        {
+          "text": "Do you like your subject?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q2",
+          "branch": "student"
+        },
+        {
+          "text": "Why did you choose to study that subject?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q3",
+          "branch": "student"
+        },
+        {
+          "text": "Do you think that your subject is popular in your country?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q4",
+          "branch": "student"
+        },
+        {
+          "text": "Do you have any plans for your studies in the next five years?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q5",
+          "branch": "student"
+        },
+        {
+          "text": "What are the benefits of being your age?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q6",
+          "branch": "student"
+        },
+        {
+          "text": "Do you want to change your major?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q7",
+          "branch": "student"
+        },
+        {
+          "text": "Do you prefer to study in the mornings or in the afternoons?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q8",
+          "branch": "student"
+        },
+        {
+          "text": "How much time do you spend on your studies each week?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q9",
+          "branch": "student"
+        },
+        {
+          "text": "Are you looking forward to working?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q10",
+          "branch": "student"
+        },
+        {
+          "text": "What technology do you use when you study?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q11",
+          "branch": "student"
+        },
+        {
+          "text": "What changes would you like to see in your school?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q12",
+          "branch": "student"
+        },
+        {
+          "text": "What work do you do?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q13",
+          "branch": "worker"
+        },
+        {
+          "text": "Why did you choose to do that type of work (or that job)?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q14",
+          "branch": "worker"
+        },
+        {
+          "text": "Do you like your job?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q15",
+          "branch": "worker"
+        },
+        {
+          "text": "What requirements did you need to meet to get your current job?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q16",
+          "branch": "worker"
+        },
+        {
+          "text": "Do you have any plans for your work in the next five years?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q17",
+          "branch": "worker"
+        },
+        {
+          "text": "What do you think is the most important at the moment?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q18",
+          "branch": "worker"
+        },
+        {
+          "text": "Do you want to change to another job?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q19",
+          "branch": "worker"
+        },
+        {
+          "text": "Do you miss being a student?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q20",
+          "branch": "worker"
+        },
+        {
+          "text": "What technology do you use at work?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q21",
+          "branch": "worker"
+        },
+        {
+          "text": "Who helps you the most? And how?",
+          "page": 26,
+          "id": "p1-bda1e9dec7-q22",
+          "branch": "worker"
+        }
+      ],
+      "id": "p1-bda1e9dec7"
+    },
+    {
+      "part": 1,
+      "title": "Home/accommodation",
+      "region": "mainland",
+      "category": "evergreen",
+      "page": 26,
+      "questions": [
+        {
+          "text": "What kind of house or apartment do you want to live in in the future?",
+          "page": 26,
+          "id": "p1-4310d6e12d-q1"
+        },
+        {
+          "text": "Are the transport facilities to your home very good?",
+          "page": 26,
+          "id": "p1-4310d6e12d-q2"
+        },
+        {
+          "text": "Do you prefer living in a house or an apartment?",
+          "page": 26,
+          "id": "p1-4310d6e12d-q3"
+        },
+        {
+          "text": "Please describe the room you live in.",
+          "page": 27,
+          "id": "p1-4310d6e12d-q4"
+        },
+        {
+          "text": "What part of your home do you like the most?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q5"
+        },
+        {
+          "text": "How long have you lived there?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q6"
+        },
+        {
+          "text": "Do you plan to live there for a long time?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q7"
+        },
+        {
+          "text": "What's the difference between where you are living now and where you have lived in the past?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q8"
+        },
+        {
+          "text": "Can you describe the place where you live?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q9"
+        },
+        {
+          "text": "What room does your family spend most of the time in?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q10"
+        },
+        {
+          "text": "What's your favorite room in your apartment or house?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q11"
+        },
+        {
+          "text": "What makes you feel pleasant in your home?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q12"
+        },
+        {
+          "text": "Do you think it is important to live in a comfortable environment?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q13"
+        },
+        {
+          "text": "Do you live in an apartment or a house?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q14"
+        },
+        {
+          "text": "Who do you live with?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q15"
+        },
+        {
+          "text": "What do you usually do in your apartment?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q16"
+        },
+        {
+          "text": "What kinds of accommodation do you live in?",
+          "page": 27,
+          "id": "p1-4310d6e12d-q17"
+        }
+      ],
+      "id": "p1-4310d6e12d"
+    },
+    {
+      "part": 1,
+      "title": "Hometown",
+      "region": "mainland",
+      "category": "evergreen",
+      "page": 27,
+      "questions": [
+        {
+          "text": "Where is your hometown?",
+          "page": 27,
+          "id": "p1-89be4211be-q1"
+        },
+        {
+          "text": "Is that a big city or a small place?",
+          "page": 27,
+          "id": "p1-89be4211be-q2"
+        },
+        {
+          "text": "Please describe your hometown a little.",
+          "page": 27,
+          "id": "p1-89be4211be-q3"
+        },
+        {
+          "text": "How long have you been living there?",
+          "page": 27,
+          "id": "p1-89be4211be-q4"
+        },
+        {
+          "text": "Do you think you will continue living there for a long time?",
+          "page": 27,
+          "id": "p1-89be4211be-q5"
+        },
+        {
+          "text": "Do you like your hometown?",
+          "page": 27,
+          "id": "p1-89be4211be-q6"
+        },
+        {
+          "text": "Do you like living there?",
+          "page": 27,
+          "id": "p1-89be4211be-q7"
+        },
+        {
+          "text": "What do you like (most) about your hometown?",
+          "page": 27,
+          "id": "p1-89be4211be-q8"
+        },
+        {
+          "text": "Is there anything you dislike about it?",
+          "page": 27,
+          "id": "p1-89be4211be-q9"
+        },
+        {
+          "text": "What's your hometown famous for?",
+          "page": 27,
+          "id": "p1-89be4211be-q10"
+        },
+        {
+          "text": "Did you learn about the history of your hometown at school?",
+          "page": 27,
+          "id": "p1-89be4211be-q11"
+        },
+        {
+          "text": "Are there many young people in your hometown?",
+          "page": 27,
+          "id": "p1-89be4211be-q12"
+        },
+        {
+          "text": "Is your hometown a good place for young people to pursue their careers?",
+          "page": 27,
+          "id": "p1-89be4211be-q13"
+        },
+        {
+          "text": "Have you learned anything about the history of your hometown?",
+          "page": 27,
+          "id": "p1-89be4211be-q14"
+        },
+        {
+          "text": "Did you learn about the culture of your hometown in your childhood?",
+          "page": 27,
+          "id": "p1-89be4211be-q15"
+        }
+      ],
+      "id": "p1-89be4211be"
+    },
+    {
+      "part": 1,
+      "title": "The area you live in",
+      "region": "mainland",
+      "category": "evergreen",
+      "page": 28,
+      "questions": [
+        {
+          "text": "Do you like the area that you live in?",
+          "page": 28,
+          "id": "p1-13660720fb-q1"
+        },
+        {
+          "text": "Where do you like to go in that area?",
+          "page": 28,
+          "id": "p1-13660720fb-q2"
+        },
+        {
+          "text": "Do you know any famous people in your area?",
+          "page": 28,
+          "id": "p1-13660720fb-q3"
+        },
+        {
+          "text": "What are some changes in the area recently?",
+          "page": 28,
+          "id": "p1-13660720fb-q4"
+        },
+        {
+          "text": "Do you know any of your neighbors?",
+          "page": 28,
+          "id": "p1-13660720fb-q5"
+        },
+        {
+          "text": "Are the people in your neighborhood nice and friendly?",
+          "page": 28,
+          "id": "p1-13660720fb-q6"
+        },
+        {
+          "text": "Do you live in a noisy or a quiet area?",
+          "page": 28,
+          "id": "p1-13660720fb-q7"
+        }
+      ],
+      "id": "p1-13660720fb"
+    },
+    {
+      "part": 1,
+      "title": "The city you live in",
+      "region": "mainland",
+      "category": "evergreen",
+      "page": 28,
+      "questions": [
+        {
+          "text": "What city do you live in?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q1"
+        },
+        {
+          "text": "Do you like this city? Why?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q2"
+        },
+        {
+          "text": "How long have you lived in this city?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q3"
+        },
+        {
+          "text": "Are there big changes in this city?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q4"
+        },
+        {
+          "text": "Is this city your permanent residence?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q5"
+        },
+        {
+          "text": "Are there people of different ages living in this city?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q6"
+        },
+        {
+          "text": "Are the people friendly in the city?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q7"
+        },
+        {
+          "text": "Is the city friendly to children and old people?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q8"
+        },
+        {
+          "text": "Do you often see your neighbors?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q9"
+        },
+        {
+          "text": "What's the weather like where you live?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q10"
+        },
+        {
+          "text": "Would you recommend your city to others?",
+          "page": 28,
+          "id": "p1-c4b76c968c-q11"
+        }
+      ],
+      "id": "p1-c4b76c968c"
+    },
+    {
+      "part": 2,
+      "title": "喜欢或不喜欢的高建筑",
+      "region": "mainland",
+      "category": "retained",
+      "page": 28,
+      "prompt": "Describe a tall building you like or dislike",
+      "bullets": [
+        "What it is used for",
+        "Where it is",
+        "What it looks like",
+        "And explain why you like/dislike it"
+      ],
+      "part3": [
+        {
+          "text": "Are there many tall buildings in your country?",
+          "page": 28,
+          "id": "p2-7dd6fb82e3-p3-1"
+        },
+        {
+          "text": "What are the differences between those tall buildings in your country?",
+          "page": 29,
+          "id": "p2-7dd6fb82e3-p3-2"
+        },
+        {
+          "text": "Why are different places laid out and designed differently?",
+          "page": 29,
+          "id": "p2-7dd6fb82e3-p3-3"
+        },
+        {
+          "text": "What are the advantages of living in tall buildings?",
+          "page": 29,
+          "id": "p2-7dd6fb82e3-p3-4"
+        },
+        {
+          "text": "Why do some people like to remodel and decorate their homes themselves?",
+          "page": 29,
+          "id": "p2-7dd6fb82e3-p3-5"
+        },
+        {
+          "text": "What kind of interior design style do most people like?",
+          "page": 29,
+          "id": "p2-7dd6fb82e3-p3-6"
+        }
+      ],
+      "id": "p2-7dd6fb82e3"
+    },
+    {
+      "part": 2,
+      "title": "有趣视频",
+      "region": "mainland",
+      "category": "retained",
+      "page": 29,
+      "prompt": "Describe an interesting video",
+      "bullets": [
+        "When and where you watched it",
+        "What it is about",
+        "Why you watched it",
+        "And explain how you feel about it"
+      ],
+      "part3": [
+        {
+          "text": "What kind of videos do people in your country like to watch?",
+          "page": 29,
+          "id": "p2-fa75bd87a2-p3-1"
+        },
+        {
+          "text": "Which is more helpful, watching videos or reading books?",
+          "page": 29,
+          "id": "p2-fa75bd87a2-p3-2"
+        },
+        {
+          "text": "What skills can people learn from watching videos?",
+          "page": 29,
+          "id": "p2-fa75bd87a2-p3-3"
+        },
+        {
+          "text": "Are there any differences between the videos that young people and old people like to watch?",
+          "page": 29,
+          "id": "p2-fa75bd87a2-p3-4"
+        },
+        {
+          "text": "Are there any differences between the videos that young men and young women like to watch?",
+          "page": 29,
+          "id": "p2-fa75bd87a2-p3-5"
+        },
+        {
+          "text": "What makes a video go viral online?",
+          "page": 29,
+          "id": "p2-fa75bd87a2-p3-6"
+        }
+      ],
+      "id": "p2-fa75bd87a2"
+    },
+    {
+      "part": 2,
+      "title": "去过的无聊地方",
+      "region": "mainland",
+      "category": "retained",
+      "page": 29,
+      "prompt": "Describe a boring place",
+      "bullets": [
+        "Where it is",
+        "Who you went there with",
+        "What you did there",
+        "And explain why you think it is a boring place"
+      ],
+      "part3": [
+        {
+          "text": "Why do most children think education is boring?",
+          "page": 29,
+          "id": "p2-58cbe8258c-p3-1"
+        },
+        {
+          "text": "Why aren't young people willing to listen to the experiences of older people?",
+          "page": 30,
+          "id": "p2-58cbe8258c-p3-2"
+        },
+        {
+          "text": "What can people do when they feel bored?",
+          "page": 30,
+          "id": "p2-58cbe8258c-p3-3"
+        },
+        {
+          "text": "Why are some teachers' classes boring? Are there any solutions?",
+          "page": 30,
+          "id": "p2-58cbe8258c-p3-4"
+        },
+        {
+          "text": "Why do some young people feel bored when talking with old people?",
+          "page": 30,
+          "id": "p2-58cbe8258c-p3-5"
+        },
+        {
+          "text": "Do most people think news about celebrities is boring?",
+          "page": 30,
+          "id": "p2-58cbe8258c-p3-6"
+        }
+      ],
+      "id": "p2-58cbe8258c"
+    },
+    {
+      "part": 2,
+      "title": "早起经历",
+      "region": "mainland",
+      "category": "retained",
+      "page": 30,
+      "prompt": "Describe a time when you got up early",
+      "bullets": [
+        "When it was",
+        "What you did",
+        "Why you got up early",
+        "And how you felt about it"
+      ],
+      "part3": [
+        {
+          "text": "Do you know anyone who likes to get up early?",
+          "page": 30,
+          "id": "p2-a3cbb1811b-p3-1"
+        },
+        {
+          "text": "Why do people get up early?",
+          "page": 30,
+          "id": "p2-a3cbb1811b-p3-2"
+        },
+        {
+          "text": "What kinds of occasions need people to arrive early?",
+          "page": 30,
+          "id": "p2-a3cbb1811b-p3-3"
+        },
+        {
+          "text": "Why do some people like to stay up late?",
+          "page": 30,
+          "id": "p2-a3cbb1811b-p3-4"
+        },
+        {
+          "text": "Is it good to arrive early in any situation?",
+          "page": 30,
+          "id": "p2-a3cbb1811b-p3-5"
+        },
+        {
+          "text": "What kind of people like getting up early?",
+          "page": 30,
+          "id": "p2-a3cbb1811b-p3-6"
+        }
+      ],
+      "id": "p2-a3cbb1811b"
+    },
+    {
+      "part": 2,
+      "title": "喜欢在家/花园种菜的人",
+      "region": "mainland",
+      "category": "retained",
+      "page": 30,
+      "prompt": "Describe a person who loves to grow plants (e.g. vegetables, flowers) at home or in the garden",
+      "bullets": [
+        "Who this person is",
+        "What plants he/she grows",
+        "How he/she grows the plants",
+        "And explain why he/she loves growing plants"
+      ],
+      "part3": [
+        {
+          "text": "What are the advantages of growing vegetables or flowers at home?",
+          "page": 30,
+          "id": "p2-af34f0912d-p3-1"
+        },
+        {
+          "text": "Do many people grow vegetables or flowers at home in your country?",
+          "page": 30,
+          "id": "p2-af34f0912d-p3-2"
+        },
+        {
+          "text": "Is it easy to grow plants at home?",
+          "page": 31,
+          "id": "p2-af34f0912d-p3-3"
+        },
+        {
+          "text": "Why do some people like to grow plants?",
+          "page": 31,
+          "id": "p2-af34f0912d-p3-4"
+        },
+        {
+          "text": "Why do some people prefer to grow their own fruits and vegetables instead of buying them from the market?",
+          "page": 31,
+          "id": "p2-af34f0912d-p3-5"
+        },
+        {
+          "text": "Do you think students should learn to grow plant?",
+          "page": 31,
+          "id": "p2-af34f0912d-p3-6"
+        }
+      ],
+      "id": "p2-af34f0912d"
+    },
+    {
+      "part": 2,
+      "title": "想颁布的新法律",
+      "region": "mainland",
+      "category": "retained",
+      "page": 31,
+      "prompt": "Describe a new law you would like to introduce in your country",
+      "bullets": [
+        "What law it is",
+        "What changes this law brings",
+        "Whether this new law will be popular",
+        "How you came up with the new law",
+        "And explain how you feel about this new law"
+      ],
+      "part3": [
+        {
+          "text": "What rules should students follow at school?",
+          "page": 31,
+          "id": "p2-fcf8b02c33-p3-1"
+        },
+        {
+          "text": "Do people in your country usually obey the law?",
+          "page": 31,
+          "id": "p2-fcf8b02c33-p3-2"
+        },
+        {
+          "text": "What kinds of behavior are considered as good behavior?",
+          "page": 31,
+          "id": "p2-fcf8b02c33-p3-3"
+        },
+        {
+          "text": "Do you think children can learn about the law outside of school?",
+          "page": 31,
+          "id": "p2-fcf8b02c33-p3-4"
+        },
+        {
+          "text": "What are the benefits for people to obey rules?",
+          "page": 31,
+          "id": "p2-fcf8b02c33-p3-5"
+        },
+        {
+          "text": "How can parents teach children to obey rules?",
+          "page": 31,
+          "id": "p2-fcf8b02c33-p3-6"
+        }
+      ],
+      "id": "p2-fcf8b02c33"
+    },
+    {
+      "part": 2,
+      "title": "发小",
+      "region": "mainland",
+      "category": "retained",
+      "page": 31,
+      "prompt": "Describe a friend from your childhood",
+      "bullets": [
+        "Who he/she is",
+        "Where and how you met each other",
+        "What you often did together",
+        "And explain what made you like him/her"
+      ],
+      "part3": [
+        {
+          "text": "Do you still keep in touch with your friends from childhood? Why or why not?",
+          "page": 31,
+          "id": "p2-7b2e66b5f8-p3-1"
+        },
+        {
+          "text": "How important is childhood friendship to children?",
+          "page": 31,
+          "id": "p2-7b2e66b5f8-p3-2"
+        },
+        {
+          "text": "What do you think of communicating via social media?",
+          "page": 32,
+          "id": "p2-7b2e66b5f8-p3-3"
+        },
+        {
+          "text": "Do you think online communication through social media will replace face-to-face communication?",
+          "page": 32,
+          "id": "p2-7b2e66b5f8-p3-4"
+        },
+        {
+          "text": "What's the difference between having younger friends and older friends?",
+          "page": 32,
+          "id": "p2-7b2e66b5f8-p3-5"
+        },
+        {
+          "text": "Has technology changed people's friendships? How?",
+          "page": 32,
+          "id": "p2-7b2e66b5f8-p3-6"
+        }
+      ],
+      "id": "p2-7b2e66b5f8"
+    },
+    {
+      "part": 2,
+      "title": "想从事医疗行业的人",
+      "region": "mainland",
+      "category": "retained",
+      "page": 32,
+      "prompt": "Describe a person you know who would like to choose a career in the medical field (e.g. a doctor, a nurse)",
+      "bullets": [
+        "When you knew him/her",
+        "When he/she started to think about that",
+        "What he/she would like to do",
+        "And explain why he/she would like to choose this career"
+      ],
+      "part3": [
+        {
+          "text": "Do you think being a doctor is easy or difficult?",
+          "page": 32,
+          "id": "p2-07b7a4e17f-p3-1"
+        },
+        {
+          "text": "Do you think learning biology is interesting for children?",
+          "page": 32,
+          "id": "p2-07b7a4e17f-p3-2"
+        },
+        {
+          "text": "Why do some children want to become doctors?",
+          "page": 32,
+          "id": "p2-07b7a4e17f-p3-3"
+        },
+        {
+          "text": "Do you think governments should put a large amount of money into medical research?",
+          "page": 32,
+          "id": "p2-07b7a4e17f-p3-4"
+        },
+        {
+          "text": "Why is some doctors' pay high and others' low?",
+          "page": 32,
+          "id": "p2-07b7a4e17f-p3-5"
+        },
+        {
+          "text": "Do you think doctors should be paid more?",
+          "page": 32,
+          "id": "p2-07b7a4e17f-p3-6"
+        }
+      ],
+      "id": "p2-07b7a4e17f"
+    },
+    {
+      "part": 2,
+      "title": "拥有成功商业的人",
+      "region": "mainland",
+      "category": "retained",
+      "page": 32,
+      "prompt": "Describe a person you know who has a successful business",
+      "bullets": [
+        "Who this person is",
+        "How you got to know him/her",
+        "Why and how he/she started the business",
+        "What business he/she does",
+        "And explain why you think the business is successful"
+      ],
+      "part3": [
+        {
+          "text": "Why do some people start their own business?",
+          "page": 33,
+          "id": "p2-2eada5c564-p3-1"
+        },
+        {
+          "text": "Should governments provide financial support to start-ups?",
+          "page": 33,
+          "id": "p2-2eada5c564-p3-2"
+        },
+        {
+          "text": "Do most people prefer shopping at big stores or small stores?",
+          "page": 33,
+          "id": "p2-2eada5c564-p3-3"
+        },
+        {
+          "text": "What makes a business successful?",
+          "page": 33,
+          "id": "p2-2eada5c564-p3-4"
+        },
+        {
+          "text": "What makes a business fail?",
+          "page": 33,
+          "id": "p2-2eada5c564-p3-5"
+        },
+        {
+          "text": "Is it easy to set up a new business in your country?",
+          "page": 33,
+          "id": "p2-2eada5c564-p3-6"
+        }
+      ],
+      "id": "p2-2eada5c564"
+    },
+    {
+      "part": 2,
+      "title": "近期改变的计划",
+      "region": "mainland",
+      "category": "retained",
+      "page": 33,
+      "prompt": "Describe a plan that you had to change recently",
+      "bullets": [
+        "When this happened",
+        "What made you change the plan",
+        "What the new plan was",
+        "And how you felt about the change"
+      ],
+      "part3": [
+        {
+          "text": "Do people often change their plans?",
+          "page": 33,
+          "id": "p2-e293a86e84-p3-1"
+        },
+        {
+          "text": "Would you tell others if you change your plan?",
+          "page": 33,
+          "id": "p2-e293a86e84-p3-2"
+        },
+        {
+          "text": "Why do you think parents still make plans for their children nowadays?",
+          "page": 33,
+          "id": "p2-e293a86e84-p3-3"
+        },
+        {
+          "text": "How does technology help people make plans?",
+          "page": 33,
+          "id": "p2-e293a86e84-p3-4"
+        },
+        {
+          "text": "What kind of plans do people often make?",
+          "page": 33,
+          "id": "p2-e293a86e84-p3-5"
+        },
+        {
+          "text": "Do you think people like the process of making plans more, or the moment of carrying them out?",
+          "page": 33,
+          "id": "p2-e293a86e84-p3-6"
+        }
+      ],
+      "id": "p2-e293a86e84"
+    },
+    {
+      "part": 2,
+      "title": "在团队中工作",
+      "region": "mainland",
+      "category": "retained",
+      "page": 33,
+      "prompt": "Describe a time when you worked in a group",
+      "bullets": [
+        "What you did",
+        "Who you worked with",
+        "What problems you faced",
+        "And explain why you worked in the group"
+      ],
+      "part3": [
+        {
+          "text": "Why do some people prefer to work by themselves?",
+          "page": 33,
+          "id": "p2-5aed609d66-p3-1"
+        },
+        {
+          "text": "What should a leader do to make team members want to follow him or her?",
+          "page": 34,
+          "id": "p2-5aed609d66-p3-2"
+        },
+        {
+          "text": "Should students learn to do group work?",
+          "page": 34,
+          "id": "p2-5aed609d66-p3-3"
+        },
+        {
+          "text": "What group tasks are there in schools?",
+          "page": 34,
+          "id": "p2-5aed609d66-p3-4"
+        },
+        {
+          "text": "What advantages are there for students experiencing teamwork at school?",
+          "page": 34,
+          "id": "p2-5aed609d66-p3-5"
+        },
+        {
+          "text": "How can you tell if a person is a good leader?",
+          "page": 34,
+          "id": "p2-5aed609d66-p3-6"
+        }
+      ],
+      "id": "p2-5aed609d66"
+    },
+    {
+      "part": 2,
+      "title": "重要决定",
+      "region": "mainland",
+      "category": "retained",
+      "page": 34,
+      "prompt": "Describe an important decision that you made",
+      "bullets": [
+        "What the decision was",
+        "How you made your decision",
+        "What the results of the decision were",
+        "And explain why it was important"
+      ],
+      "part3": [
+        {
+          "text": "Do you think children sometimes have to make important decisions?",
+          "page": 34,
+          "id": "p2-01f61ef7cc-p3-1"
+        },
+        {
+          "text": "What important decisions do teenagers need to make after graduation?",
+          "page": 34,
+          "id": "p2-01f61ef7cc-p3-2"
+        },
+        {
+          "text": "Who can children turn to for help when making a decision?",
+          "page": 34,
+          "id": "p2-01f61ef7cc-p3-3"
+        },
+        {
+          "text": "Do you think advertisements can influence our decisions when shopping?",
+          "page": 34,
+          "id": "p2-01f61ef7cc-p3-4"
+        },
+        {
+          "text": "Do you think the influence of advertising is good?",
+          "page": 34,
+          "id": "p2-01f61ef7cc-p3-5"
+        },
+        {
+          "text": "How do people usually make important decisions?",
+          "page": 34,
+          "id": "p2-01f61ef7cc-p3-6"
+        }
+      ],
+      "id": "p2-01f61ef7cc"
+    },
+    {
+      "part": 2,
+      "title": "喜欢的现场体育赛事",
+      "region": "mainland",
+      "category": "retained",
+      "page": 34,
+      "prompt": "Describe a live sports event you watched and liked",
+      "bullets": [
+        "What it was",
+        "When and where you watched it",
+        "Who you watched it with",
+        "And explain why you liked it"
+      ],
+      "part3": [
+        {
+          "text": "Why do some people like to watch sports events?",
+          "page": 34,
+          "id": "p2-584ed305fd-p3-1"
+        },
+        {
+          "text": "Where do people normally watch sports events?",
+          "page": 34,
+          "id": "p2-584ed305fd-p3-2"
+        },
+        {
+          "text": "What are the advantages of watching sports events online?",
+          "page": 34,
+          "id": "p2-584ed305fd-p3-3"
+        },
+        {
+          "text": "What sports matches are suitable for children to attend?",
+          "page": 35,
+          "id": "p2-584ed305fd-p3-4"
+        },
+        {
+          "text": "Why do some people spend a lot going to other countries to watch sports events?",
+          "page": 35,
+          "id": "p2-584ed305fd-p3-5"
+        },
+        {
+          "text": "What sports games are popular in your country?",
+          "page": 35,
+          "id": "p2-584ed305fd-p3-6"
+        }
+      ],
+      "id": "p2-584ed305fd"
+    },
+    {
+      "part": 2,
+      "title": "特别场合的食物",
+      "region": "mainland",
+      "category": "retained",
+      "page": 35,
+      "prompt": "Describe a food that people eat on special occasions/events",
+      "bullets": [
+        "What it is",
+        "What the special event/occasion is",
+        "How it is cooked/made",
+        "And explain why people eat it on that special occasion/event"
+      ],
+      "part3": [
+        {
+          "text": "Why are there special foods on special occasions or events?",
+          "page": 35,
+          "id": "p2-5d926a2059-p3-1"
+        },
+        {
+          "text": "What are the differences between everyday food and festival food?",
+          "page": 35,
+          "id": "p2-5d926a2059-p3-2"
+        },
+        {
+          "text": "Are there any differences between the food people eat today and the food people ate in the past?",
+          "page": 35,
+          "id": "p2-5d926a2059-p3-3"
+        },
+        {
+          "text": "Do people today prefer eating at home or in a restaurant?",
+          "page": 35,
+          "id": "p2-5d926a2059-p3-4"
+        }
+      ],
+      "id": "p2-5d926a2059"
+    },
+    {
+      "part": 2,
+      "title": "擅长学习和说语言的人",
+      "region": "mainland",
+      "category": "retained",
+      "page": 35,
+      "prompt": "Describe a person who is good at learning and speaking new languages",
+      "bullets": [
+        "How you got to know him/her",
+        "How he/she learns a new language",
+        "What languages he/she can speak",
+        "And explain how you feel about him/her"
+      ],
+      "part3": [
+        {
+          "text": "Are there many people who can speak foreign languages in your country?",
+          "page": 35,
+          "id": "p2-cafe651dca-p3-1"
+        },
+        {
+          "text": "Does speaking other languages help at work?",
+          "page": 35,
+          "id": "p2-cafe651dca-p3-2"
+        },
+        {
+          "text": "Do people learn any languages other than English?",
+          "page": 35,
+          "id": "p2-cafe651dca-p3-3"
+        },
+        {
+          "text": "Why is it easier for children to learn new things than for adults?",
+          "page": 35,
+          "id": "p2-cafe651dca-p3-4"
+        },
+        {
+          "text": "How do people learn new things?",
+          "page": 35,
+          "id": "p2-cafe651dca-p3-5"
+        },
+        {
+          "text": "What is the most important thing for learning a language well?",
+          "page": 36,
+          "id": "p2-cafe651dca-p3-6"
+        }
+      ],
+      "id": "p2-cafe651dca"
+    },
+    {
+      "part": 2,
+      "title": "遇到的科技问题",
+      "region": "mainland",
+      "category": "retained",
+      "page": 36,
+      "prompt": "Describe a challenging technological problem you faced",
+      "bullets": [
+        "What the problem was",
+        "When and where you faced it",
+        "How challenging it was",
+        "And explain how you solved it"
+      ],
+      "part3": [
+        {
+          "text": "What are the advantages and disadvantages of AI?",
+          "page": 36,
+          "id": "p2-1047b005d0-p3-1"
+        },
+        {
+          "text": "Do you think people today should learn about AI technology?",
+          "page": 36,
+          "id": "p2-1047b005d0-p3-2"
+        },
+        {
+          "text": "Should children learn to use AI?",
+          "page": 36,
+          "id": "p2-1047b005d0-p3-3"
+        },
+        {
+          "text": "How can AI help in our lives?",
+          "page": 36,
+          "id": "p2-1047b005d0-p3-4"
+        },
+        {
+          "text": "Do you think students are overly reliant on AI?",
+          "page": 36,
+          "id": "p2-1047b005d0-p3-5"
+        },
+        {
+          "text": "What can teachers do to stop students from relying too much on AI?",
+          "page": 36,
+          "id": "p2-1047b005d0-p3-6"
+        }
+      ],
+      "id": "p2-1047b005d0"
+    },
+    {
+      "part": 2,
+      "title": "名人出演的广告",
+      "region": "mainland",
+      "category": "retained",
+      "page": 36,
+      "prompt": "Describe an advertisement with a famous person in it",
+      "bullets": [
+        "Who the person is",
+        "Where you can see it",
+        "What the advertisement is about",
+        "And explain how you feel about the advertisement"
+      ],
+      "part3": [
+        {
+          "text": "What are the advantages and disadvantages of advertisements?",
+          "page": 36,
+          "id": "p2-e1b8d59ad4-p3-1"
+        },
+        {
+          "text": "Why are many advertisements endorsed by celebrities? How useful are they?",
+          "page": 36,
+          "id": "p2-e1b8d59ad4-p3-2"
+        },
+        {
+          "text": "What is the most important factor in an advertisement?",
+          "page": 36,
+          "id": "p2-e1b8d59ad4-p3-3"
+        },
+        {
+          "text": "Why are some advertisements boring?",
+          "page": 36,
+          "id": "p2-e1b8d59ad4-p3-4"
+        },
+        {
+          "text": "Is advertising important for a company? Why?",
+          "page": 36,
+          "id": "p2-e1b8d59ad4-p3-5"
+        },
+        {
+          "text": "Which is more effective, online advertising or offline advertising?",
+          "page": 36,
+          "id": "p2-e1b8d59ad4-p3-6"
+        }
+      ],
+      "id": "p2-e1b8d59ad4"
+    },
+    {
+      "part": 2,
+      "title": "推荐旅行过的地方",
+      "region": "mainland",
+      "category": "retained",
+      "page": 37,
+      "prompt": "Describe a place you have travelled to that you would like to recommend to others",
+      "bullets": [
+        "What it is",
+        "Where it is",
+        "What you saw and did there",
+        "And explain why you would like to recommend it to others"
+      ],
+      "part3": [
+        {
+          "text": "Where do people in your country often go for holidays?",
+          "page": 37,
+          "id": "p2-4758cfaf7b-p3-1"
+        },
+        {
+          "text": "What is the ideal length for a holiday?",
+          "page": 37,
+          "id": "p2-4758cfaf7b-p3-2"
+        },
+        {
+          "text": "How do people usually plan holidays?",
+          "page": 37,
+          "id": "p2-4758cfaf7b-p3-3"
+        },
+        {
+          "text": "Is it important to plan a holiday ahead?",
+          "page": 37,
+          "id": "p2-4758cfaf7b-p3-4"
+        },
+        {
+          "text": "Why do many countries try to attract people to visit?",
+          "page": 37,
+          "id": "p2-4758cfaf7b-p3-5"
+        },
+        {
+          "text": "How do people decide when to travel?",
+          "page": 37,
+          "id": "p2-4758cfaf7b-p3-6"
+        }
+      ],
+      "id": "p2-4758cfaf7b"
+    },
+    {
+      "part": 2,
+      "title": "喜欢拜访但不想住的家",
+      "region": "mainland",
+      "category": "retained",
+      "page": 37,
+      "prompt": "Describe a home that you like to visit but do not want to live in",
+      "bullets": [
+        "Where it is",
+        "What it is like",
+        "Why you like to visit it",
+        "And explain why you would not like to live there"
+      ],
+      "part3": [
+        {
+          "text": "Do Chinese people like to visit others' homes?",
+          "page": 37,
+          "id": "p2-812fe09e81-p3-1"
+        },
+        {
+          "text": "What do Chinese people do when they visit others?",
+          "page": 37,
+          "id": "p2-812fe09e81-p3-2"
+        },
+        {
+          "text": "What kind of place do people in your country like to live in?",
+          "page": 37,
+          "id": "p2-812fe09e81-p3-3"
+        },
+        {
+          "text": "What's the difference between homes in cities and those in the countryside?",
+          "page": 37,
+          "id": "p2-812fe09e81-p3-4"
+        },
+        {
+          "text": "What kind of gifts do people usually bring when they visit others?",
+          "page": 37,
+          "id": "p2-812fe09e81-p3-5"
+        },
+        {
+          "text": "How often do you visit your relatives or friends?",
+          "page": 37,
+          "id": "p2-812fe09e81-p3-6"
+        }
+      ],
+      "id": "p2-812fe09e81"
+    },
+    {
+      "part": 2,
+      "title": "包含动物的故事或书",
+      "region": "mainland",
+      "category": "retained",
+      "page": 38,
+      "prompt": "Describe a story/book with animals in it",
+      "bullets": [
+        "What animals are in it",
+        "What the story/book is about",
+        "Why you read the story/book",
+        "And explain what you think of this story/book"
+      ],
+      "part3": [
+        {
+          "text": "Should schools teach children about animals?",
+          "page": 38,
+          "id": "p2-4df23e1ac6-p3-1"
+        },
+        {
+          "text": "Some people think pets should not be kept in cities. What do you think?",
+          "page": 38,
+          "id": "p2-4df23e1ac6-p3-2"
+        },
+        {
+          "text": "Many people regard pets as members of their family. What do you think?",
+          "page": 38,
+          "id": "p2-4df23e1ac6-p3-3"
+        },
+        {
+          "text": "Do many people keep pets in your country?",
+          "page": 38,
+          "id": "p2-4df23e1ac6-p3-4"
+        },
+        {
+          "text": "What are the advantages of keeping a pet?",
+          "page": 38,
+          "id": "p2-4df23e1ac6-p3-5"
+        },
+        {
+          "text": "Why do people always tell children stories with animals?",
+          "page": 38,
+          "id": "p2-4df23e1ac6-p3-6"
+        }
+      ],
+      "id": "p2-4df23e1ac6"
+    },
+    {
+      "part": 2,
+      "title": "保护环境的法律",
+      "region": "mainland",
+      "category": "retained",
+      "page": 38,
+      "prompt": "Describe a law on environmental protection",
+      "bullets": [
+        "What it is",
+        "How you first learned about it",
+        "Who benefits from it",
+        "And explain how you feel about this law"
+      ],
+      "part3": [
+        {
+          "text": "What kinds of rules do schools in China have?",
+          "page": 38,
+          "id": "p2-fe9c6b6e2b-p3-1"
+        },
+        {
+          "text": "Do you think school rules are important?",
+          "page": 38,
+          "id": "p2-fe9c6b6e2b-p3-2"
+        },
+        {
+          "text": "Are children unhappy with the school rules?",
+          "page": 38,
+          "id": "p2-fe9c6b6e2b-p3-3"
+        },
+        {
+          "text": "How can parents and teachers help children understand and follow rules?",
+          "page": 38,
+          "id": "p2-fe9c6b6e2b-p3-4"
+        },
+        {
+          "text": "What are the rules people should obey at work?",
+          "page": 38,
+          "id": "p2-fe9c6b6e2b-p3-5"
+        },
+        {
+          "text": "What is the purpose of punishment?",
+          "page": 38,
+          "id": "p2-fe9c6b6e2b-p3-6"
+        }
+      ],
+      "id": "p2-fe9c6b6e2b"
+    },
+    {
+      "part": 2,
+      "title": "很久没收到回复的信息",
+      "region": "mainland",
+      "category": "retained",
+      "page": 39,
+      "prompt": "Describe a time when you sent a message or an email to someone but received no reply for a long time",
+      "bullets": [
+        "Who you sent it to",
+        "What the message/email was about",
+        "Whether you finally received the reply",
+        "And explain how you felt about the experience"
+      ],
+      "part3": [
+        {
+          "text": "In what situations do people spend a long time responding to others' messages?",
+          "page": 39,
+          "id": "p2-261a8bdd0e-p3-1"
+        },
+        {
+          "text": "In what situations do people not respond to messages at all?",
+          "page": 39,
+          "id": "p2-261a8bdd0e-p3-2"
+        },
+        {
+          "text": "What would you do if you did not receive a reply after sending out a message?",
+          "page": 39,
+          "id": "p2-261a8bdd0e-p3-3"
+        },
+        {
+          "text": "Why do some people prefer sending a message instead of making a call?",
+          "page": 39,
+          "id": "p2-261a8bdd0e-p3-4"
+        },
+        {
+          "text": "How do you show your respect in your messages?",
+          "page": 39,
+          "id": "p2-261a8bdd0e-p3-5"
+        },
+        {
+          "text": "Why do some people feel angry when others don't reply to their message?",
+          "page": 39,
+          "id": "p2-261a8bdd0e-p3-6"
+        }
+      ],
+      "id": "p2-261a8bdd0e"
+    },
+    {
+      "part": 2,
+      "title": "长久目标/抱负",
+      "region": "mainland",
+      "category": "retained",
+      "page": 39,
+      "prompt": "Describe a long-term goal/ambition you would like to achieve",
+      "bullets": [
+        "How long you have had this goal/ambition",
+        "What it is",
+        "How you will achieve it",
+        "And explain why you set it"
+      ],
+      "part3": [
+        {
+          "text": "Why should children have ambitions?",
+          "page": 39,
+          "id": "p2-1a46ee3872-p3-1"
+        },
+        {
+          "text": "What do you think of people going after high positions?",
+          "page": 39,
+          "id": "p2-1a46ee3872-p3-2"
+        },
+        {
+          "text": "Why are some young people keen on being fans of superstars?",
+          "page": 39,
+          "id": "p2-1a46ee3872-p3-3"
+        },
+        {
+          "text": "Is it good for a person to be ambitious?",
+          "page": 39,
+          "id": "p2-1a46ee3872-p3-4"
+        },
+        {
+          "text": "Do you think it is necessary to be ambitious when working in a team in a company?",
+          "page": 39,
+          "id": "p2-1a46ee3872-p3-5"
+        },
+        {
+          "text": "Should parents support their children in pursuing their ambitions?",
+          "page": 39,
+          "id": "p2-1a46ee3872-p3-6"
+        }
+      ],
+      "id": "p2-1a46ee3872"
+    },
+    {
+      "part": 2,
+      "title": "改变重要想法",
+      "region": "mainland",
+      "category": "retained",
+      "page": 40,
+      "prompt": "Describe a time when you changed an important opinion of yours",
+      "bullets": [
+        "When you changed your opinion",
+        "What the original opinion was",
+        "Why you changed it",
+        "And explain how you felt about the experience"
+      ],
+      "part3": [
+        {
+          "text": "When do most children begin to have their own opinions?",
+          "page": 40,
+          "id": "p2-74d85b0ba4-p3-1"
+        },
+        {
+          "text": "Whose opinions are more important to children, their parents' or teachers'?",
+          "page": 40,
+          "id": "p2-74d85b0ba4-p3-2"
+        },
+        {
+          "text": "Do children communicate more with teachers or with parents?",
+          "page": 40,
+          "id": "p2-74d85b0ba4-p3-3"
+        },
+        {
+          "text": "Who do young people like to share opinions with?",
+          "page": 40,
+          "id": "p2-74d85b0ba4-p3-4"
+        }
+      ],
+      "id": "p2-74d85b0ba4"
+    },
+    {
+      "part": 2,
+      "title": "想要颁布的环保法律",
+      "region": "mainland",
+      "category": "retained",
+      "page": 40,
+      "prompt": "Describe an environmental law you would like your country to introduce",
+      "bullets": [
+        "What law it should be",
+        "Why people should follow the law",
+        "Whether the law will be popular",
+        "And explain how you feel about this law"
+      ],
+      "part3": [
+        {
+          "text": "How does technology affect the law?",
+          "page": 40,
+          "id": "p2-8a52016c64-p3-1"
+        },
+        {
+          "text": "What kinds of rules do schools in China have?",
+          "page": 40,
+          "id": "p2-8a52016c64-p3-2"
+        },
+        {
+          "text": "Will there be a law that is universally accepted?",
+          "page": 40,
+          "id": "p2-8a52016c64-p3-3"
+        },
+        {
+          "text": "What environmental laws does your country already have?",
+          "page": 40,
+          "id": "p2-8a52016c64-p3-4"
+        }
+      ],
+      "id": "p2-8a52016c64"
+    },
+    {
+      "part": 2,
+      "title": "当地新闻",
+      "region": "mainland",
+      "category": "retained",
+      "page": 40,
+      "prompt": "Describe a piece of local news that people are interested in",
+      "bullets": [
+        "What it was about",
+        "Where you saw/heard it",
+        "Who was involved",
+        "And explain why people were interested in it"
+      ],
+      "part3": [
+        {
+          "text": "Do people read the newspaper where you live?",
+          "page": 41,
+          "id": "p2-71793c490d-p3-1"
+        },
+        {
+          "text": "Do people prefer local or international news?",
+          "page": 41,
+          "id": "p2-71793c490d-p3-2"
+        },
+        {
+          "text": "Do you think it's important to have a national identity?",
+          "page": 41,
+          "id": "p2-71793c490d-p3-3"
+        },
+        {
+          "text": "How can people develop their national identity?",
+          "page": 41,
+          "id": "p2-71793c490d-p3-4"
+        }
+      ],
+      "id": "p2-71793c490d"
+    },
+    {
+      "part": 2,
+      "title": "近期改变",
+      "region": "mainland",
+      "category": "retained",
+      "page": 41,
+      "prompt": "Describe a change that you made recently",
+      "bullets": [
+        "What the change was",
+        "What caused the change",
+        "What you did for the change",
+        "And explain how you feel about the change"
+      ],
+      "part3": [
+        {
+          "text": "Do you think it is good to change one's daily routine?",
+          "page": 41,
+          "id": "p2-987a7a3edc-p3-1"
+        },
+        {
+          "text": "Do you think it is good to change jobs?",
+          "page": 41,
+          "id": "p2-987a7a3edc-p3-2"
+        },
+        {
+          "text": "Is it good for people to get a job promotion?",
+          "page": 41,
+          "id": "p2-987a7a3edc-p3-3"
+        },
+        {
+          "text": "Do people often make plans around their regular routines?",
+          "page": 41,
+          "id": "p2-987a7a3edc-p3-4"
+        },
+        {
+          "text": "Who tend to change their daily routine more, young people or old people?",
+          "page": 41,
+          "id": "p2-987a7a3edc-p3-5"
+        }
+      ],
+      "id": "p2-987a7a3edc"
+    },
+    {
+      "part": 1,
+      "title": "Lost and found",
+      "region": "overseas",
+      "category": "new",
+      "page": 41,
+      "questions": [
+        {
+          "text": "Have you ever lost your keys?",
+          "page": 41,
+          "id": "p1-3d7db69d8a-q1"
+        },
+        {
+          "text": "Will you post on social media if you lose your item?",
+          "page": 41,
+          "id": "p1-3d7db69d8a-q2"
+        },
+        {
+          "text": "Have you ever lost things?",
+          "page": 41,
+          "id": "p1-3d7db69d8a-q3"
+        },
+        {
+          "text": "Do you report to the police when finding something lost by others? Why?",
+          "page": 41,
+          "id": "p1-3d7db69d8a-q4"
+        },
+        {
+          "text": "What will you do if you find something lost by others?",
+          "page": 41,
+          "id": "p1-3d7db69d8a-q5"
+        }
+      ],
+      "id": "p1-3d7db69d8a"
+    },
+    {
+      "part": 1,
+      "title": "Computers/tablets",
+      "region": "overseas",
+      "category": "new",
+      "page": 42,
+      "questions": [
+        {
+          "text": "Would you like to use a computer or tablet?",
+          "page": 42,
+          "id": "p1-2f4606c30d-q1"
+        },
+        {
+          "text": "In what conditions would you use a computer or tablet?",
+          "page": 42,
+          "id": "p1-2f4606c30d-q2"
+        },
+        {
+          "text": "When was the first time you used a computer or tablet?",
+          "page": 42,
+          "id": "p1-2f4606c30d-q3"
+        },
+        {
+          "text": "What would your life be like without computers or tablets?",
+          "page": 42,
+          "id": "p1-2f4606c30d-q4"
+        },
+        {
+          "text": "In what conditions would it be difficult for you to use a computer or tablet?",
+          "page": 42,
+          "id": "p1-2f4606c30d-q5"
+        }
+      ],
+      "id": "p1-2f4606c30d"
+    },
+    {
+      "part": 1,
+      "title": "Collecting things",
+      "region": "overseas",
+      "category": "new",
+      "page": 42,
+      "questions": [
+        {
+          "text": "Do you collect things?",
+          "page": 42,
+          "id": "p1-209028c6af-q1"
+        },
+        {
+          "text": "Where do you usually keep things you need?",
+          "page": 42,
+          "id": "p1-209028c6af-q2"
+        },
+        {
+          "text": "Would you keep old things for a long time? Why?",
+          "page": 42,
+          "id": "p1-209028c6af-q3"
+        },
+        {
+          "text": "Are there any things you have kept from your childhood?",
+          "page": 42,
+          "id": "p1-209028c6af-q4"
+        }
+      ],
+      "id": "p1-209028c6af"
+    },
+    {
+      "part": 1,
+      "title": "Street market",
+      "region": "overseas",
+      "category": "new",
+      "page": 42,
+      "questions": [
+        {
+          "text": "Are there many street markets in China?",
+          "page": 42,
+          "id": "p1-def3579c71-q1"
+        },
+        {
+          "text": "When was the last time you went to a street market?",
+          "page": 42,
+          "id": "p1-def3579c71-q2"
+        },
+        {
+          "text": "Do you prefer to go shopping in the shopping mall or on the street market?",
+          "page": 42,
+          "id": "p1-def3579c71-q3"
+        },
+        {
+          "text": "What do people usually buy on the street market?",
+          "page": 42,
+          "id": "p1-def3579c71-q4"
+        }
+      ],
+      "id": "p1-def3579c71"
+    },
+    {
+      "part": 1,
+      "title": "Feeling bored",
+      "region": "overseas",
+      "category": "new",
+      "page": 42,
+      "questions": [
+        {
+          "text": "Do you think childhood is boring or adulthood is boring?",
+          "page": 42,
+          "id": "p1-33c1b43cd8-q1"
+        },
+        {
+          "text": "What do you do when you feel bored?",
+          "page": 42,
+          "id": "p1-33c1b43cd8-q2"
+        },
+        {
+          "text": "When would you feel bored?",
+          "page": 42,
+          "id": "p1-33c1b43cd8-q3"
+        },
+        {
+          "text": "Do you often feel bored?",
+          "page": 42,
+          "id": "p1-33c1b43cd8-q4"
+        }
+      ],
+      "id": "p1-33c1b43cd8"
+    },
+    {
+      "part": 1,
+      "title": "Friends",
+      "region": "overseas",
+      "category": "new",
+      "page": 42,
+      "questions": [
+        {
+          "text": "Would you invite friends to your home?",
+          "page": 42,
+          "id": "p1-00f6620490-q1"
+        },
+        {
+          "text": "Do you prefer to spend time with one friend or with a group of friends?",
+          "page": 42,
+          "id": "p1-00f6620490-q2"
+        },
+        {
+          "text": "Do you have a friend you have known for a long time?",
+          "page": 42,
+          "id": "p1-00f6620490-q3"
+        },
+        {
+          "text": "What do you usually do with your friends?",
+          "page": 42,
+          "id": "p1-00f6620490-q4"
+        },
+        {
+          "text": "Where do you often meet each other?",
+          "page": 42,
+          "id": "p1-00f6620490-q5"
+        },
+        {
+          "text": "Do you often go out with your friends?",
+          "page": 42,
+          "id": "p1-00f6620490-q6"
+        },
+        {
+          "text": "How important are friends to you?",
+          "page": 42,
+          "id": "p1-00f6620490-q7"
+        },
+        {
+          "text": "Why are some places suitable for meeting while others are not?",
+          "page": 42,
+          "id": "p1-00f6620490-q8"
+        },
+        {
+          "text": "Is there a difference between where you meet friends now and where you used to meet them in the past?",
+          "page": 43,
+          "id": "p1-00f6620490-q9"
+        }
+      ],
+      "id": "p1-00f6620490"
+    },
+    {
+      "part": 2,
+      "title": "印象深刻的课程",
+      "region": "overseas",
+      "category": "new",
+      "page": 43,
+      "prompt": "Describe a course that impressed you a lot",
+      "bullets": [
+        "What the course was about",
+        "Where you took the course",
+        "What you did during the course",
+        "And explain why it impressed you a lot"
+      ],
+      "part3": [
+        {
+          "text": "What can we learn from history?",
+          "page": 43,
+          "id": "p2-6b20ee7c65-p3-1"
+        },
+        {
+          "text": "What do people need to remember in their daily lives?",
+          "page": 43,
+          "id": "p2-6b20ee7c65-p3-2"
+        },
+        {
+          "text": "Can technology help people remember things better? How?",
+          "page": 43,
+          "id": "p2-6b20ee7c65-p3-3"
+        },
+        {
+          "text": "Which can help people remember things better, words or photos?",
+          "page": 43,
+          "id": "p2-6b20ee7c65-p3-4"
+        },
+        {
+          "text": "Do people like things of memorial significance?",
+          "page": 43,
+          "id": "p2-6b20ee7c65-p3-5"
+        },
+        {
+          "text": "Why do some people have a better memory than others?",
+          "page": 43,
+          "id": "p2-6b20ee7c65-p3-6"
+        }
+      ],
+      "id": "p2-6b20ee7c65"
+    },
+    {
+      "part": 2,
+      "title": "想再去一次的城市",
+      "region": "overseas",
+      "category": "new",
+      "page": 43,
+      "prompt": "Describe a city that you have been to and would like to visit again",
+      "bullets": [
+        "When you visited it",
+        "What you did there",
+        "What it was like",
+        "And explain why you would like to visit it again"
+      ],
+      "part3": [
+        {
+          "text": "What should the government do to improve citizens' safety?",
+          "page": 43,
+          "id": "p2-6409455aec-p3-1"
+        },
+        {
+          "text": "Are there any changes in your city?",
+          "page": 43,
+          "id": "p2-6409455aec-p3-2"
+        },
+        {
+          "text": "Do you think people in the countryside are friendlier than people in the city?",
+          "page": 43,
+          "id": "p2-6409455aec-p3-3"
+        },
+        {
+          "text": "Do you think it is possible that all of the population move to cities?",
+          "page": 43,
+          "id": "p2-6409455aec-p3-4"
+        },
+        {
+          "text": "Some people say large cities are suitable for old people. What do you think?",
+          "page": 44,
+          "id": "p2-6409455aec-p3-5"
+        },
+        {
+          "text": "What's the difference between the city and the countryside?",
+          "page": 44,
+          "id": "p2-6409455aec-p3-6"
+        }
+      ],
+      "id": "p2-6409455aec"
+    },
+    {
+      "part": 2,
+      "title": "一见且想继续了解的人",
+      "region": "overseas",
+      "category": "new",
+      "page": 44,
+      "prompt": "Describe a person you only met once recently and want to know more about",
+      "bullets": [
+        "Who he/she is",
+        "When you met him/her",
+        "Why you want to know more about him/her",
+        "And explain how you feel about him/her"
+      ],
+      "part3": [
+        {
+          "text": "What should we not talk about when we meet a person for the first time?",
+          "page": 44,
+          "id": "p2-0cbc30446b-p3-1"
+        },
+        {
+          "text": "What can we do to leave a good impression on people we meet for the first time?",
+          "page": 44,
+          "id": "p2-0cbc30446b-p3-2"
+        },
+        {
+          "text": "What qualities make true friends?",
+          "page": 44,
+          "id": "p2-0cbc30446b-p3-3"
+        },
+        {
+          "text": "Is it important to have the same hobbies and interests when making friends?",
+          "page": 44,
+          "id": "p2-0cbc30446b-p3-4"
+        },
+        {
+          "text": "On what occasions do people like to make friends?",
+          "page": 44,
+          "id": "p2-0cbc30446b-p3-5"
+        },
+        {
+          "text": "How do people make friends in China?",
+          "page": 44,
+          "id": "p2-0cbc30446b-p3-6"
+        }
+      ],
+      "id": "p2-0cbc30446b"
+    },
+    {
+      "part": 2,
+      "title": "送朋友的礼物",
+      "region": "overseas",
+      "category": "new",
+      "page": 44,
+      "prompt": "Describe a gift you would like to buy for your friend",
+      "bullets": [
+        "How you knew your friend",
+        "How long you have known him/her",
+        "How you would choose a gift for him/her",
+        "And explain why you would choose that gift for him/her"
+      ],
+      "part3": [
+        {
+          "text": "Are there any unlucky things that people should not buy as gifts in your country?",
+          "page": 44,
+          "id": "p2-cf0b63f4db-p3-1"
+        },
+        {
+          "text": "What do people usually consider when buying gifts?",
+          "page": 44,
+          "id": "p2-cf0b63f4db-p3-2"
+        },
+        {
+          "text": "Which do people give on traditional festivals, red envelopes or other kinds of gifts?",
+          "page": 44,
+          "id": "p2-cf0b63f4db-p3-3"
+        },
+        {
+          "text": "Will people feel happy when receiving an expensive gift?",
+          "page": 44,
+          "id": "p2-cf0b63f4db-p3-4"
+        },
+        {
+          "text": "Is it hard to choose a gift?",
+          "page": 44,
+          "id": "p2-cf0b63f4db-p3-5"
+        },
+        {
+          "text": "When do people normally send gifts to others?",
+          "page": 44,
+          "id": "p2-cf0b63f4db-p3-6"
+        }
+      ],
+      "id": "p2-cf0b63f4db"
+    },
+    {
+      "part": 2,
+      "title": "公共场所丢物品",
+      "region": "overseas",
+      "category": "new",
+      "page": 45,
+      "prompt": "Describe an occasion that you lost something in public",
+      "bullets": [
+        "What you lost",
+        "When and where you lost it",
+        "What you did to find it",
+        "And explain how you felt about it"
+      ],
+      "part3": [
+        {
+          "text": "What do people often feel after losing things?",
+          "page": 45,
+          "id": "p2-c8aaf93208-p3-1"
+        },
+        {
+          "text": "What can we do to reduce the possibility of losing things?",
+          "page": 45,
+          "id": "p2-c8aaf93208-p3-2"
+        },
+        {
+          "text": "What kinds of people may lose things often?",
+          "page": 45,
+          "id": "p2-c8aaf93208-p3-3"
+        },
+        {
+          "text": "Is it effective to offer rewards to find lost things?",
+          "page": 45,
+          "id": "p2-c8aaf93208-p3-4"
+        },
+        {
+          "text": "What will people do when losing things?",
+          "page": 45,
+          "id": "p2-c8aaf93208-p3-5"
+        },
+        {
+          "text": "What kinds of things do people usually lose?",
+          "page": 45,
+          "id": "p2-c8aaf93208-p3-6"
+        }
+      ],
+      "id": "p2-c8aaf93208"
+    },
+    {
+      "part": 2,
+      "title": "节约时间的方法/改变",
+      "region": "overseas",
+      "category": "new",
+      "page": 45,
+      "prompt": "Describe a way/change that helps you save a lot of time",
+      "bullets": [
+        "What it is",
+        "How you implement it",
+        "How difficult it is",
+        "And explain how you feel about the way/change"
+      ],
+      "part3": [
+        {
+          "text": "What can people do to save time?",
+          "page": 45,
+          "id": "p2-e7ea47e561-p3-1"
+        },
+        {
+          "text": "Does technology help people save time? How and why?",
+          "page": 45,
+          "id": "p2-e7ea47e561-p3-2"
+        },
+        {
+          "text": "Do you think parents should be responsible for teaching children to save time?",
+          "page": 45,
+          "id": "p2-e7ea47e561-p3-3"
+        },
+        {
+          "text": "Do people who can manage time well become successful more easily?",
+          "page": 45,
+          "id": "p2-e7ea47e561-p3-4"
+        },
+        {
+          "text": "Is it necessary for children to learn time management?",
+          "page": 45,
+          "id": "p2-e7ea47e561-p3-5"
+        },
+        {
+          "text": "What can schools do to help students learn time management?",
+          "page": 45,
+          "id": "p2-e7ea47e561-p3-6"
+        }
+      ],
+      "id": "p2-e7ea47e561"
+    }
+  ]
+}
