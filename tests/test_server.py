@@ -42,6 +42,17 @@ class PersistenceAndSelection(unittest.TestCase):
         server.choose_plan({'mode': 'full'})
         self.assertEqual(server.usage(), {})
 
+    def test_full_exam_keeps_all_topic_questions_in_bank_order(self):
+        for identity in ('student', 'worker'):
+            for kind in ('practice', 'exam'):
+                with self.subTest(identity=identity, type=kind):
+                    options = {'mode': 'full', 'type': kind, 'identity': identity, 'region': 'all'}
+                    plan = server.choose_plan(options)
+                    self.assertTrue(any(len(t['questions']) > 4 for t in plan['part1']))
+                    for topic in plan['part1']:
+                        expected = server.eligible_questions(server.TOPICS[topic['id']], options)
+                        self.assertEqual(topic['questions'], expected)
+
     def test_only_displayed_questions_count_and_saves_are_idempotent(self):
         topic = next(t for t in server.BANK['topics'] if t['part'] == 1)
         qid = topic['questions'][0]['id']

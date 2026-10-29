@@ -54,6 +54,33 @@ test('forced total-time limit ends even while voice callback is delayed',()=>{
   now+=841000;exam.tick();assert.equal(exam.stage,'done');
 });
 
+for(const type of ['practice','exam']){
+  test(`full ${type} asks every question in each selected topic before changing topics`,()=>{
+    let now=100000;const p=plan();p.type=type;
+    p.part1=p.part1.slice(0,3).map((t,i)=>({...t,questions:Array.from({length:[6,8,11][i]},(_,j)=>({id:`${t.id}q${j}`,text:`Question ${j+1}?`}))}));
+    const exam=new ExamEngine(p,{},()=>now);exam.start();
+    for(let i=0;i<4;i++){now+=1000;exam.next('Introduction.');}
+    for(const topic of p.part1){
+      for(const question of topic.questions){
+        assert.equal(exam.stage,'part1');
+        assert.equal(exam.current.topicId,topic.id);
+        assert.equal(exam.current.questionId,question.id);
+        now+=9000;exam.next('An answer.');exam.tick();
+      }
+    }
+    assert.equal(exam.stage,'prep');
+    assert.deepEqual(exam.events.filter(e=>e.stage==='part1').map(e=>e.questionId),p.part1.flatMap(t=>t.questions.map(q=>q.id)));
+  });
+}
+
+test('timed exam still enforces the Part 1 deadline for a long topic',()=>{
+  let now=100000;const p=plan();p.part1[0].questions=Array.from({length:17},(_,i)=>({id:`long-${i}`,text:'A question?'}));
+  const exam=new ExamEngine(p,{},()=>now);exam.start();
+  for(let i=0;i<4;i++)exam.next('Introduction.');
+  now+=300000;exam.tick();assert.equal(exam.stage,'prep');
+  assert.equal(exam.events.find(e=>e.stage==='part1').advanceReason,'stage-time');
+});
+
 test('free practice never advances after silence, question limits, or total time',()=>{
   let now=100000;const p=plan();p.type='practice';
   const exam=new ExamEngine(p,{autoNext:true},()=>now);exam.start();

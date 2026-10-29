@@ -26,7 +26,7 @@ FROZEN = bool(getattr(sys, 'frozen', False))
 APP_HOME = Path(sys.executable).resolve().parent if FROZEN else ROOT
 DATA = APP_HOME / 'NotShyData' if FROZEN else ROOT / "data"
 WEB = ROOT / "web"
-VERSION = '1.3.1'
+VERSION = '1.3.2'
 TOKEN = secrets.token_urlsafe(32)
 LOCK = threading.RLock()
 TTS_LOCK = threading.Lock()
@@ -150,10 +150,8 @@ def choose_plan(options, counts=None):
     groups = []
     for t in p1:
         qs = eligible_questions(t, options)
-        # Full exams ask up to four questions in each topic, consecutively.
-        selected = sorted(qs, key=lambda q: score(q["id"]))[:4] if mode == "full" else qs
-        selected_ids = {q["id"] for q in selected}
-        groups.append({**t, "questions": [q for q in qs if q["id"] in selected_ids]})
+        # Select topics by history, then keep every eligible question in bank order.
+        groups.append({**t, "questions": qs})
     return {"part1": groups, "part2": p2[0] if p2 else None, "mode": mode,
             "type": options.get("type", "practice" if mode == "topic" else "exam")}
 
