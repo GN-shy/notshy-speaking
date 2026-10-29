@@ -8,6 +8,12 @@
 
 Windows 10/11 x64；首次练习允许浏览器使用麦克风。应用在 Edge 独立窗口运行，并在通知区域提供打开和退出菜单。
 
+## Shy 十天冲刺
+
+首页或侧栏点击“Shy 十天冲刺”：每天 4 个完整 Part 1 主题、6 张 Part 2 题卡及各自全部 Part 3 原题。先问完 4 个主题，再逐张题卡练 Part 2/3。全程手动、不限时，不加开场或额外追问。
+
+首次开始当天为第 1 天，之后按日期推进，最多 10 天。每天只组一份任务；保存后能继续未完成的小题，全部完成显示“今日任务完成”。优先单题未练的主题，题库轮完后优先练习较少、较久未练的主题。已完成的小题同步题库的“单题已练”，不改变整套模拟统计。不保存会撤销当次进度并保留当天原题。
+
 ## 功能
 
 - 自选题库练习，以及从开场到 Part 3 的完整模拟。
@@ -44,12 +50,12 @@ python -m venv .build-venv
 .\.build-venv\Scripts\python.exe tools\build_windows.py
 ```
 
-打包结果位于 `release/NotShy-1.3.2-Windows-x64.zip`。EXE 自带 Python 运行时、界面和题库。收件人不需要源码目录或开发环境。实际运行仍需 Windows 与支持麦克风的浏览器。
+打包结果位于 `release/NotShy-1.4.0-Windows-x64.zip`。EXE 自带 Python 运行时、界面和题库。收件人不需要源码目录或开发环境。实际运行仍需 Windows 与支持麦克风的浏览器。
 
 ## 检查
 
 ```powershell
-node --test tests/engine.test.js tests/turns.test.js
+node --test tests/engine.test.js tests/turns.test.js tests/sprint.test.js
 python -m unittest discover -s tests -p test_server.py -v
 ```
 

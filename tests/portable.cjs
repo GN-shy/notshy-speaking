@@ -2,7 +2,7 @@ const {chromium,browserExecutable}=require('./browser-runtime.cjs');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const {spawn}=require('node:child_process');
+const {spawn,spawnSync}=require('node:child_process');
 const folder=process.env.NOTSHY_PORTABLE_DIR;
 if(!folder)throw Error('Set NOTSHY_PORTABLE_DIR to a freshly extracted release folder.');
 const exe=path.join(folder,'NotShy.exe'),BASE='http://127.0.0.1:8781';
@@ -14,7 +14,7 @@ async function main(){
  assert.ok(fs.existsSync(exe));assert.equal(fs.existsSync(path.join(folder,'NotShyData')),false,'release starts without private data');
  let child=launch(),browser;
  try{
-  const health=await healthy();assert.equal(health.version,'1.3.2');assert.equal(health.product,'NotShy');
+  const health=await healthy();assert.equal(health.version,'1.4.0');assert.equal(health.product,'NotShy');
   console.log('EXE started without Python on PATH');
   const boot=await(await fetch(BASE+'/api/bootstrap')).json();assert.equal(boot.desktop,true);assert.equal((await(await fetch(BASE+'/api/history')).json()).length,0);
   assert.equal(boot.bank.topics.length,102);
@@ -52,6 +52,8 @@ async function main(){
   console.log('EXE Part 1 verified: all questions in each topic asked consecutively');
   assert.ok(fs.existsSync(path.join(folder,'NotShyData','practice.sqlite3')));assert.ok(fs.readdirSync(path.join(folder,'NotShyData','recordings',sid)).length>0);
   console.log('Packaged microphone recording and persistence passed');
+  const sprint=spawnSync(process.execPath,[path.join(__dirname,'sprint-browser.cjs')],{env:{...process.env,NOTSHY_TEST_BASE:BASE},stdio:'inherit',windowsHide:true,timeout:90000});
+  assert.equal(sprint.status,0,'daily sprint passes against the real packaged EXE');
   await page.locator('#modal-close').click();await page.locator('#quit-app').click();await page.waitForSelector('h1:has-text("NotShy 已退出")');await exited(child);
   console.log('First EXE exited cleanly');
   // A separate launch must reuse persistent data, without any Python executable on PATH.
@@ -61,7 +63,7 @@ async function main(){
   console.log('Duplicate launch reused the existing service');
   await fetch(BASE+'/api/quit',{method:'POST',headers:{'Content-Type':'application/json','X-App-Token':second.token},body:'{}'});await exited(child);
   assert.deepEqual(errors,[]);
-  const result={passed:true,version:health.version,executableRanWithoutPythonPath:true,emptyInitialHistory:true,questionTopics:boot.bank.topics.length,part1CompleteTopics:true,part1QuestionCounts:plan.part1.slice(0,3).map(t=>t.questions.length),localVoiceBytes:wav.length,microphoneRecordingSaved:true,restartPreservedHistory:true,trayAndUiExitClean:true,consoleErrors:errors};
+  const result={passed:true,version:health.version,executableRanWithoutPythonPath:true,emptyInitialHistory:true,questionTopics:boot.bank.topics.length,part1CompleteTopics:true,part1QuestionCounts:plan.part1.slice(0,3).map(t=>t.questions.length),sprintVerified:true,localVoiceBytes:wav.length,microphoneRecordingSaved:true,restartPreservedHistory:true,trayAndUiExitClean:true,consoleErrors:errors};
   fs.writeFileSync(path.resolve(__dirname,'../test-results/portable-result.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));
  }finally{if(browser)await browser.close();try{const b=await(await fetch(BASE+'/api/bootstrap')).json();await fetch(BASE+'/api/quit',{method:'POST',headers:{'Content-Type':'application/json','X-App-Token':b.token},body:'{}'});}catch{}if(child.exitCode===null)child.kill();}
 }

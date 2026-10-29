@@ -1,6 +1,7 @@
 """Speaking Room: local-only, dependency-free desktop web app."""
 import argparse
 from contextlib import contextmanager
+from datetime import date, timedelta
 import hashlib
 import json
 import mimetypes
@@ -26,7 +27,7 @@ FROZEN = bool(getattr(sys, 'frozen', False))
 APP_HOME = Path(sys.executable).resolve().parent if FROZEN else ROOT
 DATA = APP_HOME / 'NotShyData' if FROZEN else ROOT / "data"
 WEB = ROOT / "web"
-VERSION = '1.3.2'
+VERSION = '1.4.0'
 TOKEN = secrets.token_urlsafe(32)
 LOCK = threading.RLock()
 TTS_LOCK = threading.Lock()
@@ -69,6 +70,8 @@ def init_db():
           PRIMARY KEY(session_id,question_id));
         CREATE TABLE IF NOT EXISTS exam_completed(session_id TEXT, question_id TEXT, topic_id TEXT, happened REAL,
           PRIMARY KEY(session_id,question_id));
+        CREATE TABLE IF NOT EXISTS sprint_settings(key TEXT PRIMARY KEY, value TEXT);
+        CREATE TABLE IF NOT EXISTS sprint_days(day INTEGER PRIMARY KEY, day_date TEXT, plan TEXT, session_id TEXT);
         """)
         # Rebuild derived progress from existing records without changing the originals.
         for row in db.execute("SELECT payload FROM sessions").fetchall():
@@ -84,11 +87,11 @@ def index_progress(db, payload):
         if qid in QUESTION_TOPICS:
             db.execute(f'INSERT OR IGNORE INTO {table} VALUES(?,?,?,?)',
                        (sid, qid, QUESTION_TOPICS[qid], happened))
-    if payload.get('mode') == 'topic':
+    if payload.get('mode') in ('topic', 'sprint'):
         for event in events:
             if event.get('answered'):
                 qid = event.get('questionId')
-                if qid in TOPICS and TOPICS[qid]['part'] == 2 and not any(e.get('stage') == 'talk' and e.get('answered') for e in events):
+                if qid in TOPICS and TOPICS[qid]['part'] == 2 and not any(e.get('stage') == 'talk' and e.get('answered') and e.get('topicId', qid) == qid for e in events):
                     continue
                 put('single_practice', qid, event.get('askedAt', payload.get('started', 0)))
         return
@@ -160,6 +163,49 @@ def eligible_questions(topic, options):
     return [q for q in topic.get("questions", []) if not q.get("branch") or q["branch"] == options.get("identity", "student")]
 
 
+def choose_sprint_plan(options):
+    counts = usage()
+    pool = [t for t in BANK['topics'] if options.get('region', 'mainland') == 'all' or t['region'] == 'mainland']
+    def topic_score(t):
+        ids = [q['id'] for q in eligible_questions(t, options)] if t['part'] == 1 else [t['id']] + [q['id'] for q in t['part3']]
+        seen = [counts.get(qid, {}).get('count', 0) for qid in ids]
+        priority = 0 if not any(seen) else (1 if not all(seen) else 2)
+        return priority, sum(seen) / max(len(seen), 1), max((counts.get(qid, {}).get('last', 0) for qid in ids), default=0), random.random()
+    p1 = sorted((t for t in pool if t['part'] == 1), key=topic_score)[:4]
+    cards = sorted((t for t in pool if t['part'] == 2), key=topic_score)[:6]
+    if len(p1) != 4 or len(cards) != 6:
+        raise ValueError('题库数量不足，无法组成每日任务')
+    return {'mode': 'sprint', 'type': 'practice', 'part1': [{**t, 'questions': eligible_questions(t, options)} for t in p1],
+            'cards': cards, 'part2': cards[0], 'settings': {'region': options.get('region', 'mainland'), 'identity': options.get('identity', 'student')}}
+
+
+def sprint_state(options=None, today=None):
+    today = today or date.today()
+    with LOCK, connect() as db:
+        row = db.execute("SELECT value FROM sprint_settings WHERE key='start_date'").fetchone()
+        if row is None and options is not None:
+            db.execute("INSERT INTO sprint_settings VALUES('start_date',?)", (today.isoformat(),))
+        start = date.fromisoformat(row[0]) if row else today
+        day = min(10, max(1, (today - start).days + 1))
+        task = db.execute('SELECT * FROM sprint_days WHERE day=?', (day,)).fetchone()
+        if task is None and options is not None:
+            # Choose once per day. Reopening or changing preferences cannot reroll it.
+            plan = choose_sprint_plan(options)
+            db.execute('INSERT INTO sprint_days VALUES(?,?,?,?)', (day, (start + timedelta(days=day-1)).isoformat(), json.dumps(plan, ensure_ascii=False), str(uuid.uuid4())))
+            task = db.execute('SELECT * FROM sprint_days WHERE day=?', (day,)).fetchone()
+        saved = None
+        if task:
+            saved_row = db.execute('SELECT payload FROM sessions WHERE id=?', (task['session_id'],)).fetchone()
+            saved = json.loads(saved_row[0]) if saved_row else None
+        days = []
+        for item in db.execute('SELECT d.day,d.day_date,s.payload FROM sprint_days d LEFT JOIN sessions s ON s.id=d.session_id ORDER BY d.day'):
+            payload = json.loads(item['payload']) if item['payload'] else {}
+            days.append({'day': item['day'], 'date': item['day_date'], 'status': payload.get('status', 'not_started')})
+        return {'started': row is not None or options is not None, 'startDate': start.isoformat() if row or options is not None else None,
+                'day': day, 'days': days, 'completedDays': sum(d['status'] == 'completed' for d in days),
+                'plan': json.loads(task['plan']) if task else None, 'sessionId': task['session_id'] if task else None, 'session': saved}
+
+
 def save_session(payload):
     sid = str(payload.get("id", ""))
     if not re.fullmatch(r"[a-f0-9-]{36}", sid):
@@ -198,6 +244,7 @@ def discard_session(sid):
             db.execute("DELETE FROM sessions WHERE id=?", (sid,))
             for table in ('single_practice', 'exam_draws', 'exam_completed'):
                 db.execute(f'DELETE FROM {table} WHERE session_id=?', (sid,))
+            db.execute('UPDATE sprint_days SET session_id=? WHERE session_id=?', (str(uuid.uuid4()), sid))
         if folder.exists():
             shutil.rmtree(folder)
     return sid
@@ -275,11 +322,14 @@ class Handler(BaseHTTPRequestHandler):
             if route == "/api/bootstrap":
                 return self.json_out({"token": TOKEN, "bank": BANK, "usage": usage(),
                                       'examUsage': exam_metrics(), 'examTopics': exam_metrics('topic_id'),
+                                      'sprint': sprint_state(),
                                       'desktop': FROZEN, 'version': VERSION})
             if route == "/api/history":
                 with connect() as db:
                     rows = db.execute("SELECT payload FROM sessions ORDER BY started DESC LIMIT 200").fetchall()
                 return self.json_out([json.loads(r[0]) for r in rows])
+            if route == '/api/sprint':
+                return self.json_out(sprint_state())
             if route.startswith("/recordings/"):
                 file = (DATA / route.lstrip("/")).resolve()
                 if not file.is_relative_to((DATA / "recordings").resolve()) or not file.is_file():
@@ -323,6 +373,8 @@ class Handler(BaseHTTPRequestHandler):
             body = json.loads(self.rfile.read(size))
             if route == "/api/plan":
                 return self.json_out(choose_plan(body))
+            if route == '/api/sprint':
+                return self.json_out(sprint_state(body))
             if route == "/api/session":
                 return self.json_out({"id": save_session(body)})
             if route == "/api/discard":

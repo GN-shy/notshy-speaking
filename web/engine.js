@@ -57,7 +57,7 @@ export class ExamEngine {
     this.turn=null;this.answerReadyAt=null;this.microphoneReady=false;
     this.current={id:crypto.randomUUID(),questionId:q.id,text:q.text,bullets:q.bullets||[],page:q.page||topic?.page||null,
       stage:this.stage,topicId:topic?.id||null,topic:topic?.title||'Introduction',kind,
-      askedAt:this.clock()/1000,elapsed:this.elapsed,answer:'',duration:0,_askedMs:this.clock(),answered:false};
+      askedAt:this.clock()/1000,elapsed:this.elapsed,answer:'',duration:0,_askedMs:this.clock(),answered:false,stepIndex:q.stepIndex};
     this.events.push(this.current);this.questionSequence++;this.onchange(this.current);
   }
   askIntro(){this.ask({id:'intro-'+this.introIndex,text:INTRO[this.introIndex]},null,'intro');}
@@ -174,5 +174,58 @@ export class ExamEngine {
   }
   snapshot(){
     return this.events.map(({_askedMs,...event})=>({...event,answer:event.answer||''}));
+  }
+}
+
+// A fixed daily workload: no introductory or supplemental questions, no deadlines.
+export class SprintEngine extends ExamEngine {
+  constructor(plan,options={},clock=()=>Date.now()){
+    super({...plan,type:'practice'},options,clock);this.position=0;
+    this.steps=plan.part1.flatMap(topic=>topic.questions.map(question=>({stage:'part1',topic,question,kind:'bank'})));
+    for(const topic of plan.cards){
+      this.steps.push({stage:'prep',topic,question:{id:topic.id,text:topic.prompt,bullets:topic.bullets},kind:'card'});
+      this.steps.push({stage:'talk',topic,question:{id:'talk',text:"Please begin when you are ready. Click 'I'm done' when you finish."},kind:'instruction'});
+      this.steps.push(...topic.part3.map(question=>({stage:'part3',topic,question,kind:'bank'})));
+    }
+  }
+  get isPractice(){return true;}
+  start(saved=null){
+    this.startedAt=this.clock()-(saved?.elapsed||0)*1000;
+    this.events=(saved?.events||[]).map(e=>({...e}));
+    // Resume the first uncompleted step; merely displaying it never completes it.
+    const done=new Set(this.events.filter(e=>e.answered).map(e=>e.stepIndex));
+    this.position=this.steps.findIndex((_,i)=>!done.has(i));
+    if(this.position<0)return this.finish('completed');
+    this.showStep();
+  }
+  showStep(){
+    const step=this.steps[this.position];this.plan.part2=step.topic;
+    this.stage=step.stage;this.stageAt=this.clock();this.deadline=Infinity;
+    this.waitingForVoice=['prep','talk'].includes(this.stage);
+    const existing=this.events.find(e=>e.stepIndex===this.position&&!e.answered);
+    if(existing){
+      this.current=existing;this.current._askedMs=this.clock();this.turn=null;this.answerReadyAt=null;
+      this.onchange(this.current);
+    }else this.ask({...step.question,stepIndex:this.position},step.topic,step.kind);
+  }
+  next(answer,automatic=false){
+    if(this.stage==='done'||this.waitingForVoice||automatic)return;
+    this.markAdvance('manual');this.closeCurrent(answer);this.position++;
+    if(this.position>=this.steps.length)return this.finish('completed');
+    this.showStep();
+  }
+  tick(){}
+  finish(reason='interrupted'){
+    if(this.stage==='done')return;
+    // Pausing must not mark the unfinished current question as practiced.
+    if(reason==='completed')this.closeCurrent();
+    else if(this.current)this.current.duration=this.questionElapsed;
+    this.reason=reason;this.finishedElapsed=this.elapsed;this.stage='done';this.onchange(null);
+  }
+  progress(){
+    const done=new Set(this.events.filter(e=>e.answered).map(e=>e.stepIndex));
+    const complete=topic=>this.steps.every((step,i)=>step.topic.id!==topic.id||done.has(i));
+    return {part1:this.plan.part1.filter(complete).length,cards:this.plan.cards.filter(complete).length,
+      answered:this.steps.filter((_,i)=>done.has(i)).length,total:this.steps.length};
   }
 }

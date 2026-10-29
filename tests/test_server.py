@@ -42,6 +42,72 @@ class PersistenceAndSelection(unittest.TestCase):
         server.choose_plan({'mode': 'full'})
         self.assertEqual(server.usage(), {})
 
+    def test_sprint_workload_and_unseen_priority(self):
+        options = {'identity': 'student', 'region': 'mainland'}
+        plan = server.choose_sprint_plan(options)
+        self.assertEqual(len(plan['part1']), 4)
+        self.assertEqual(len(plan['cards']), 6)
+        self.assertEqual(len({t['id'] for t in plan['part1']}), 4)
+        self.assertEqual(len({t['id'] for t in plan['cards']}), 6)
+        events = []
+        for topic in plan['part1']:
+            self.assertEqual(topic['questions'], server.eligible_questions(server.TOPICS[topic['id']], options))
+            events.extend({'questionId': q['id'], 'answered': True} for q in topic['questions'])
+        for topic in plan['cards']:
+            events.extend([{'questionId': topic['id'], 'answered': True}, {'questionId': 'talk', 'topicId': topic['id'], 'stage': 'talk', 'answered': True}])
+            events.extend({'questionId': q['id'], 'answered': True} for q in topic['part3'])
+        server.save_session({'id': str(uuid.uuid4()), 'mode': 'sprint', 'events': events})
+        self.assertEqual(server.exam_metrics(), {})
+        next_plan = server.choose_sprint_plan(options)
+        self.assertTrue({t['id'] for t in plan['part1']}.isdisjoint(t['id'] for t in next_plan['part1']))
+        self.assertTrue({t['id'] for t in plan['cards']}.isdisjoint(t['id'] for t in next_plan['cards']))
+
+    def test_sprint_persists_one_plan_per_day_and_resumes_saved_session(self):
+        from datetime import date
+        options = {'identity': 'student'}
+        initial = server.sprint_state(today=date(2026, 10, 29))
+        self.assertFalse(initial['started'])
+        first = server.sprint_state(options, today=date(2026, 10, 29))
+        self.assertEqual(first['day'], 1)
+        again = server.sprint_state({'identity': 'worker'}, today=date(2026, 10, 29))
+        self.assertEqual(first['plan'], again['plan'])
+        self.assertEqual(first['sessionId'], again['sessionId'])
+        payload = {'id': first['sessionId'], 'mode': 'sprint', 'status': 'interrupted', 'events': []}
+        server.save_session(payload)
+        self.assertEqual(server.sprint_state(today=date(2026, 10, 29))['session'], payload)
+        payload['status'] = 'completed'
+        server.save_session(payload)
+        self.assertEqual(server.sprint_state(today=date(2026, 10, 29))['completedDays'], 1)
+        tomorrow = server.sprint_state(options, today=date(2026, 10, 30))
+        self.assertEqual(tomorrow['day'], 2)
+        self.assertNotEqual(tomorrow['sessionId'], first['sessionId'])
+        last = server.sprint_state(options, today=date(2026, 11, 20))
+        self.assertEqual(last['day'], 10)
+        self.assertEqual(server.sprint_state(options, today=date(2026, 11, 21))['sessionId'], last['sessionId'])
+
+    def test_sprint_discard_resets_progress_without_rerolling_the_day(self):
+        task = server.sprint_state({})
+        qid = task['plan']['part1'][0]['questions'][0]['id']
+        server.save_session({'id': task['sessionId'], 'mode': 'sprint', 'events': [{'questionId': qid, 'answered': True}]})
+        self.assertIn(qid, server.usage())
+        server.discard_session(task['sessionId'])
+        new = server.sprint_state({})
+        self.assertNotEqual(new['sessionId'], task['sessionId'])
+        self.assertEqual(new['plan'], task['plan'])
+        self.assertIsNone(new['session'])
+        self.assertEqual(server.usage(), {})
+
+    def test_sprint_card_requires_its_own_completed_talk(self):
+        cards = server.choose_sprint_plan({})['cards'][:2]
+        sid = str(uuid.uuid4())
+        events = [{'questionId': c['id'], 'answered': True} for c in cards]
+        events += [{'questionId': 'talk', 'topicId': cards[0]['id'], 'stage': 'talk', 'answered': True}]
+        events += [{'questionId': cards[1]['part3'][0]['id'], 'answered': False}]
+        server.save_session({'id': sid, 'mode': 'sprint', 'events': events})
+        self.assertIn(cards[0]['id'], server.usage())
+        self.assertNotIn(cards[1]['id'], server.usage())
+        self.assertNotIn(cards[1]['part3'][0]['id'], server.usage())
+
     def test_full_exam_keeps_all_topic_questions_in_bank_order(self):
         for identity in ('student', 'worker'):
             for kind in ('practice', 'exam'):
