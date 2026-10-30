@@ -20,14 +20,14 @@ import time
 import uuid
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qs
 
 ROOT = Path(__file__).resolve().parent
 FROZEN = bool(getattr(sys, 'frozen', False))
 APP_HOME = Path(sys.executable).resolve().parent if FROZEN else ROOT
 DATA = APP_HOME / 'NotShyData' if FROZEN else ROOT / "data"
 WEB = ROOT / "web"
-VERSION = '1.4.0'
+VERSION = '1.5.0'
 TOKEN = secrets.token_urlsafe(32)
 LOCK = threading.RLock()
 TTS_LOCK = threading.Lock()
@@ -179,17 +179,23 @@ def choose_sprint_plan(options):
             'cards': cards, 'part2': cards[0], 'settings': {'region': options.get('region', 'mainland'), 'identity': options.get('identity', 'student')}}
 
 
-def sprint_state(options=None, today=None):
+def sprint_state(options=None, today=None, selected_day=None):
     today = today or date.today()
+    selected_day = options.get('day', selected_day) if options is not None else selected_day
+    if selected_day is not None:
+        if isinstance(selected_day, bool) or not re.fullmatch(r'(?:[1-9]|10)', str(selected_day)):
+            raise ValueError('请选择第 1–10 天')
+        selected_day = int(selected_day)
     with LOCK, connect() as db:
         row = db.execute("SELECT value FROM sprint_settings WHERE key='start_date'").fetchone()
         if row is None and options is not None:
             db.execute("INSERT INTO sprint_settings VALUES('start_date',?)", (today.isoformat(),))
         start = date.fromisoformat(row[0]) if row else today
-        day = min(10, max(1, (today - start).days + 1))
+        calendar_day = min(10, max(1, (today - start).days + 1))
+        day = selected_day or calendar_day
         task = db.execute('SELECT * FROM sprint_days WHERE day=?', (day,)).fetchone()
         if task is None and options is not None:
-            # Choose once per day. Reopening or changing preferences cannot reroll it.
+            # One task per numbered day, including days started ahead of schedule.
             plan = choose_sprint_plan(options)
             db.execute('INSERT INTO sprint_days VALUES(?,?,?,?)', (day, (start + timedelta(days=day-1)).isoformat(), json.dumps(plan, ensure_ascii=False), str(uuid.uuid4())))
             task = db.execute('SELECT * FROM sprint_days WHERE day=?', (day,)).fetchone()
@@ -202,7 +208,7 @@ def sprint_state(options=None, today=None):
             payload = json.loads(item['payload']) if item['payload'] else {}
             days.append({'day': item['day'], 'date': item['day_date'], 'status': payload.get('status', 'not_started')})
         return {'started': row is not None or options is not None, 'startDate': start.isoformat() if row or options is not None else None,
-                'day': day, 'days': days, 'completedDays': sum(d['status'] == 'completed' for d in days),
+                'day': day, 'calendarDay': calendar_day, 'days': days, 'completedDays': sum(d['status'] == 'completed' for d in days),
                 'plan': json.loads(task['plan']) if task else None, 'sessionId': task['session_id'] if task else None, 'session': saved}
 
 
@@ -329,7 +335,8 @@ class Handler(BaseHTTPRequestHandler):
                     rows = db.execute("SELECT payload FROM sessions ORDER BY started DESC LIMIT 200").fetchall()
                 return self.json_out([json.loads(r[0]) for r in rows])
             if route == '/api/sprint':
-                return self.json_out(sprint_state())
+                selected_day = parse_qs(urlsplit(self.path).query).get('day', [None])[0]
+                return self.json_out(sprint_state(selected_day=selected_day))
             if route.startswith("/recordings/"):
                 file = (DATA / route.lstrip("/")).resolve()
                 if not file.is_relative_to((DATA / "recordings").resolve()) or not file.is_file():
@@ -341,6 +348,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.json_out({"error": "Not found"}, 404)
             ct = {".js": "text/javascript", ".css": "text/css", ".html": "text/html", ".svg": "image/svg+xml"}.get(file.suffix, mimetypes.guess_type(str(file))[0] or "application/octet-stream")
             return self.send_bytes(file.read_bytes(), ct + "; charset=utf-8")
+        except ValueError as exc:
+            return self.json_out({"error": str(exc)}, 400)
         except Exception as exc:
             return self.json_out({"error": str(exc)}, 500)
 

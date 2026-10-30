@@ -46,18 +46,52 @@ async function main(){
     for(const qid of [topic.id,...topic.part3.map(q=>q.id)])assert.equal(state.usage[qid].count,1);
   }
   assert.ok(saved.events.some(e=>e.audio),'microphone audio saved');assert.deepEqual(state.examUsage,prior.examUsage);
-  assert.match(await page.locator('.modal-title').innerText(),/今日任务完成/);
+  assert.match(await page.locator('.modal-title').innerText(),/任务完成/);
   await page.screenshot({path:'test-results/sprint-done.png',fullPage:true});
-  await page.locator('#back-home').click();assert.match(await page.locator('#start-sprint').innerText(),/今日任务完成/);
-  await page.locator('#start-sprint').click();assert.match(await page.locator('.modal-title').innerText(),/今日任务完成/);await page.locator('#modal-close').click();
+  await page.locator('#back-home').click();assert.match(await page.locator('#start-sprint').innerText(),/任务完成/);
+  await page.locator('#start-sprint').click();assert.match(await page.locator('.modal-title').innerText(),/任务完成/);await page.locator('#modal-close').click();
   await page.locator('[data-nav="bank"]').click();await page.locator(`[data-topic="${plan.part1[0].id}"]`).click();
   assert.match(await page.locator('.question-list li').first().innerText(),/单题已练 1 次/);
   assert.deepEqual(errors,[]);
+  // Complete future days on the same date, with independent plans and saved state.
+  await page.locator('#modal-close').click();await page.locator('[data-nav="home"]').click();
+  await page.locator('#start-sprint').click();await page.locator('#sprint-next').click();
+  await page.waitForFunction(()=>document.querySelector('#modal-content .eyebrow')?.textContent.includes('DAY 2'));
+  assert.match(await page.locator('.eyebrow').last().innerText(),/DAY 2/);
+  await page.locator('#text-start').click();await page.locator('#exam').waitFor({state:'visible'});
+  await page.waitForFunction(()=>!document.querySelector('#next').disabled);
+  const second=await(await fetch(BASE+'/api/sprint?day=2')).json();
+  assert.equal(second.calendarDay,1);assert.notEqual(second.sessionId,daily.sessionId);
+  await page.locator('#next').click();await page.waitForFunction(()=>!document.querySelector('#next').disabled);
+  const secondCurrent=await current(page);
+  await page.locator('#end-exam').click();await page.locator('#confirm-end').click();await page.locator('#export-session').waitFor();
+  await page.reload();await page.locator('.stat').first().waitFor();
+  assert.equal(await page.locator('[data-sprint-day="2"]').getAttribute('aria-pressed'),'true');
+  await page.locator('#start-sprint').click();await page.locator('#text-start').click();
+  await page.locator('#exam').waitFor({state:'visible'});await page.waitForFunction(()=>!document.querySelector('#next').disabled);
+  assert.equal((await current(page)).id,secondCurrent.id);
+  let futureGuard=0;
+  while(!(await page.locator('#export-session').isVisible())){
+    await page.waitForFunction(()=>!document.querySelector('#next').disabled||!!document.querySelector('#export-session'));
+    if(await page.locator('#export-session').isVisible())break;
+    await page.locator('#next').click();if(++futureGuard>300)throw Error('Future day did not finish');
+  }
+  const completedFuture=await(await fetch(BASE+'/api/sprint?day=2')).json();
+  assert.equal(completedFuture.session.status,'completed');assert.equal(completedFuture.completedDays,2);assert.equal(completedFuture.calendarDay,1);
+  await page.locator('#sprint-next').click();await page.waitForFunction(()=>document.querySelector('#modal-content .eyebrow')?.textContent.includes('DAY 3'));assert.match(await page.locator('.eyebrow').last().innerText(),/DAY 3/);
+  await page.locator('#modal-close').click();await page.locator('[data-nav="home"]').click();
+  await page.locator('[data-sprint-day="10"]').click();await page.waitForFunction(()=>document.querySelector('#modal-content .eyebrow')?.textContent.includes('DAY 10'));assert.match(await page.locator('.eyebrow').last().innerText(),/DAY 10/);
+  await page.locator('#modal-close').click();await page.screenshot({path:'test-results/sprint-advance.png',fullPage:true});
+  assert.equal((await(await fetch(BASE+'/api/sprint?day=10')).json()).plan,null,'selecting a day does not assemble or mark questions');
+  for(const day of [1,2]){
+    const task=await(await fetch(BASE+`/api/sprint?day=${day}`)).json();
+    await fetch(BASE+'/api/discard',{method:'POST',headers,body:JSON.stringify({id:task.sessionId})});
+  }
   // Discarding a daily session reverses its single-question counts and completion.
-  const discarded=await fetch(BASE+'/api/discard',{method:'POST',headers,body:JSON.stringify({id:daily.sessionId})});assert.equal(discarded.status,200);
+
   const reset=await(await fetch(BASE+'/api/bootstrap')).json();assert.equal(reset.sprint.completedDays,0);assert.deepEqual(reset.usage,{});
   assert.deepEqual(reset.sprint.plan,plan);assert.notEqual(reset.sprint.sessionId,daily.sessionId);
-  fs.writeFileSync('test-results/sprint-result.json',JSON.stringify({passed:true,part1Topics:4,pairedCards:6,steps:saved.events.length,manualNoTimeout:true,resumesUnfinished:true,singlePracticeSynced:true,completedDay:true,discardRollback:true,microphoneAudio:true,consoleErrors:errors},null,2));
+  fs.writeFileSync('test-results/sprint-result.json',JSON.stringify({passed:true,part1Topics:4,pairedCards:6,steps:saved.events.length,manualNoTimeout:true,resumesUnfinished:true,singlePracticeSynced:true,completedDay:true,discardRollback:true,advanceFutureDays:true,selectedDayPersisted:true,microphoneAudio:true,consoleErrors:errors},null,2));
   console.log('Sprint browser passed: exact workload, no timeout, pause/resume, six paired groups, daily completion, single-question labels, audio, discard rollback.');
  }finally{await browser.close();}
 }

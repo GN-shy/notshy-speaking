@@ -1,4 +1,5 @@
 """Build an allowlisted, clean Windows distribution without personal data."""
+import argparse
 import hashlib
 from importlib import metadata
 import json
@@ -10,16 +11,19 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '1.4.0'
+VERSION = '1.5.0'
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--package-dir', type=Path, default=ROOT / 'release' / 'NotShy')
+    args = parser.parse_args()
     env = os.environ.copy()
     env['PYINSTALLER_CONFIG_DIR'] = str(ROOT / 'build' / 'pyinstaller-cache')
     subprocess.run([sys.executable, '-m', 'PyInstaller', '--noconfirm', '--clean',
                     '--distpath', str(ROOT / 'dist'), '--workpath', str(ROOT / 'build' / 'pyinstaller'),
                     str(ROOT / 'NotShy.spec')], cwd=ROOT, env=env, check=True)
-    package = ROOT / 'release' / 'NotShy'
+    package = args.package_dir.resolve()
     licenses = package / 'THIRD_PARTY_LICENSES'
     licenses.mkdir(parents=True, exist_ok=True)
     allowed = []

@@ -108,6 +108,38 @@ class PersistenceAndSelection(unittest.TestCase):
         self.assertNotIn(cards[1]['id'], server.usage())
         self.assertNotIn(cards[1]['part3'][0]['id'], server.usage())
 
+    def test_sprint_can_complete_future_days_without_advancing_calendar_or_replacing_other_days(self):
+        from datetime import date
+        today = date(2026, 10, 30)
+        first = server.sprint_state({}, today=today)
+        future = server.sprint_state({'day': 5}, today=today)
+        self.assertEqual((future['day'], future['calendarDay']), (5, 1))
+        self.assertNotEqual(first['sessionId'], future['sessionId'])
+        server.save_session({'id': future['sessionId'], 'mode': 'sprint', 'sprintDay': 5, 'status': 'completed', 'events': []})
+        restored = server.sprint_state(selected_day='5', today=today)
+        self.assertEqual(restored['session']['status'], 'completed')
+        self.assertEqual(restored['plan'], future['plan'])
+        self.assertEqual(restored['completedDays'], 1)
+        original = server.sprint_state(today=today)
+        self.assertEqual(original['day'], 1)
+        self.assertEqual(original['sessionId'], first['sessionId'])
+        self.assertEqual(original['plan'], first['plan'])
+        self.assertEqual(server.sprint_state(selected_day=5, today=date(2026, 11, 3))['sessionId'], future['sessionId'])
+
+    def test_sprint_all_ten_days_can_be_finished_on_the_same_date(self):
+        from datetime import date
+        today = date(2026, 10, 30)
+        for day in range(1, 11):
+            task = server.sprint_state({'day': day}, today=today)
+            server.save_session({'id': task['sessionId'], 'mode': 'sprint', 'sprintDay': day, 'status': 'completed', 'events': []})
+        state = server.sprint_state(today=today)
+        self.assertEqual(state['completedDays'], 10)
+        self.assertEqual(state['calendarDay'], 1)
+        self.assertEqual(len(state['days']), 10)
+        for invalid in (0, 11, -1, True, 1.5, 'abc', '1.0'):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                server.sprint_state({'day': invalid}, today=today)
+
     def test_full_exam_keeps_all_topic_questions_in_bank_order(self):
         for identity in ('student', 'worker'):
             for kind in ('practice', 'exam'):

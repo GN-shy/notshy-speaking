@@ -14,7 +14,7 @@ async function main(){
  assert.ok(fs.existsSync(exe));assert.equal(fs.existsSync(path.join(folder,'NotShyData')),false,'release starts without private data');
  let child=launch(),browser;
  try{
-  const health=await healthy();assert.equal(health.version,'1.4.0');assert.equal(health.product,'NotShy');
+  const health=await healthy();assert.equal(health.version,'1.5.0');assert.equal(health.product,'NotShy');
   console.log('EXE started without Python on PATH');
   const boot=await(await fetch(BASE+'/api/bootstrap')).json();assert.equal(boot.desktop,true);assert.equal((await(await fetch(BASE+'/api/history')).json()).length,0);
   assert.equal(boot.bank.topics.length,102);

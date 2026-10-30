@@ -11,6 +11,8 @@ const defaults={region:'mainland',identity:'student',voice:'local',rate:'0',auto
 function stored(key,fallback){try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}}
 let settings={...defaults,...stored('speaking-settings',{})};
 let bank,usage={},examUsage={},examTopics={},history=[],sprint={},token='',route='home',partFilter=1,engine=null,session=null;
+let sprintSelectedDay=stored('shy-sprint-selected-day',null);
+if(!Number.isInteger(sprintSelectedDay)||sprintSelectedDay<1||sprintSelectedDay>10)sprintSelectedDay=null;
 let stream=null,audioContext=null,analyser=null,recording=null,speechAudio=null,speechAbort=null,speechResolve=null;
 let recorderStopping=Promise.resolve(),persistQueue=Promise.resolve(),speaking=false,generation=0,recognition=null;
 let voiceTimer=null,recRestart=null,listenActive=false,recognitionBlocked=false;
@@ -38,21 +40,33 @@ function renderHome(){
   bindHistoryRows();
   renderSprint();
 }
-function renderSprint(){
-  const saved=sprint.session,done=saved?.status==='completed';
-  $('#sprint-status').textContent=`第 ${sprint.day||1} / 10 天 · 已完成 ${sprint.completedDays||0} 天${done?' · 今日任务完成':saved?' · 今日任务已保存，可继续':' · 今天的任务等你开始'}`;
-  $('#sprint-days').innerHTML=Array.from({length:10},(_,i)=>{const state=sprint.days?.find(d=>d.day===i+1);return `<span class="${state?.status==='completed'?'done':i+1===(sprint.day||1)?'current':''}">${i+1}${state?.status==='completed'?' ✓':''}</span>`;}).join('');
-  $('#start-sprint').textContent=done?'今日任务完成 ✓':saved?'继续今日任务 →':'开始今日任务 →';
+function sprintDayLabel(){return sprint.day===sprint.calendarDay?'今日':`第 ${sprint.day} 天`;}
+function nextSprintDay(day){return Array.from({length:10},(_,i)=>i+1).find(n=>n>day&&sprint.days?.find(d=>d.day===n)?.status!=='completed');}
+async function loadSprint(day=sprintSelectedDay){
+  const state=await api('/api/sprint'+(day?`?day=${day}`:''));
+  sprint=state;
+  if(day){sprintSelectedDay=day;localStorage.setItem('shy-sprint-selected-day',JSON.stringify(day));}
+  return state;
 }
-async function sprintPrompt(){
-  if(engine&&engine.stage!=='done'){toast('请先结束当前练习，再进入今日任务。');return;}
+function renderSprint(){
+  const saved=sprint.session,done=saved?.status==='completed',label=sprintDayLabel();
+  $('#sprint-status').textContent=`当前选择第 ${sprint.day||1} / 10 天 · 已完成 ${sprint.completedDays||0} 天 · 可点击任意天数提前练习${done?` · ${label}任务完成`:saved?' · 进度已保存，可继续':''}`;
+  $('#sprint-days').innerHTML=Array.from({length:10},(_,i)=>{const n=i+1,state=sprint.days?.find(d=>d.day===n),status=state?.status==='completed'?'已完成':state?.status&&state.status!=='not_started'?'未完成，可继续':'未开始';return `<button type="button" data-sprint-day="${n}" aria-label="第 ${n} 天，${status}" aria-pressed="${n===(sprint.day||1)}" class="${state?.status==='completed'?'done':''} ${n===(sprint.day||1)?'current':''}">第 ${n} 天${state?.status==='completed'?' ✓':''}</button>`;}).join('');
+  $$('[data-sprint-day]').forEach(button=>button.onclick=()=>sprintPrompt(Number(button.dataset.sprintDay)));
+  $('#start-sprint').textContent=done?`${label}任务完成 ✓`:saved?`继续${label}任务 →`:`开始${label}任务 →`;
+}
+async function sprintPrompt(day=sprintSelectedDay){
+  if(engine&&engine.stage!=='done'){toast('请先结束当前练习，再选择其他天数。');return;}
   try{
-    sprint=await api('/api/sprint');renderSprint();
+    await loadSprint(day);renderSprint();
+    const label=sprintDayLabel();
     if(sprint.session?.status==='completed'){
-      modal(`<p class="eyebrow">SHY'S DAILY SPRINT · DAY ${sprint.day}</p><h2 class="modal-title">今日任务完成 ✓</h2><p class="modal-sub">4 个 Part 1 完整主题、6 组 Part 2 与对应全部 Part 3 已完成。${sprint.day===10?'十天计划已到最后一天。':'明天回来继续下一天。'}</p><div class="modal-actions"><button id="sprint-review" class="button primary">查看今日记录</button></div>`);
+      const next=nextSprintDay(sprint.day);
+      modal(`<p class="eyebrow">SHY'S DAILY SPRINT · DAY ${sprint.day}</p><h2 class="modal-title">${label}任务完成 ✓</h2><p class="modal-sub">4 个 Part 1 完整主题、6 组 Part 2 与对应全部 Part 3 已完成。${next?`可以现在继续第 ${next} 天，不用等日期。`:'后续天数已完成，可在首页选择其他天数查看或继续。'}</p><div class="modal-actions">${next?`<button id="sprint-next" class="button primary">练第 ${next} 天 →</button>`:''}<button id="sprint-review" class="button secondary">查看第 ${sprint.day} 天记录</button></div>`);
+      if(next)$('#sprint-next').onclick=()=>sprintPrompt(next);
       $('#sprint-review').onclick=()=>showReview(sprint.session);return;
     }
-    modal(`<p class="eyebrow">JUST FOR SHY · DAY ${sprint.day} / 10</p><h2 class="modal-title">${sprint.session?'继续':'开始'}今日冲刺任务</h2><p class="modal-sub">4 个 Part 1 大类，每类全部小题；6 张 Part 2 题卡，每张接对应的全部 Part 3 原题。<br>按这个顺序练完，今天任务就结束。准备和回答均不限时，点击“说完了”才下一题。<br>优先未练题；题库轮完后优先练习次数少的。完成的小题同步显示“单题已练”。中途保存后可继续；不保存会撤销本场进度。${sprint.plan?'<br>今天已组好题，继续时沿用原题与原身份设置。':'<br>首次开始当天记为第 1 天，此后按日期推进，共 10 天。'}</p><p id="start-error" class="muted" role="status"></p><div class="modal-actions"><button id="confirm-start" class="button primary">允许麦克风并${sprint.session?'继续':'开始'} →</button><button id="text-start" class="button secondary">字幕练习（不录音）</button></div>`);
+    modal(`<p class="eyebrow">JUST FOR SHY · DAY ${sprint.day} / 10</p><h2 class="modal-title">${sprint.session?'继续':'开始'}${label}冲刺任务</h2><p class="modal-sub">4 个 Part 1 大类，每类全部小题；6 张 Part 2 题卡，每张接对应的全部 Part 3 原题。<br>按这个顺序练完，第 ${sprint.day} 天的任务就完成。准备和回答均不限时，点击“说完了”才下一题。<br>优先未练题；题库轮完后优先练习次数少的。完成的小题同步显示“单题已练”。中途保存后可继续；不保存会撤销本场进度。${sprint.plan?'<br>这一天已组好题，继续时沿用原题与原身份设置。':'<br>可提前完成第 1–10 天，每天各有一份独立任务和进度。'}</p><p id="start-error" class="muted" role="status"></p><div class="modal-actions"><button id="confirm-start" class="button primary">允许麦克风并${sprint.session?'继续':'开始'} →</button><button id="text-start" class="button secondary">字幕练习（不录音）</button></div>`);
     $('#confirm-start').onclick=()=>begin('sprint',null,false,'practice');$('#text-start').onclick=()=>begin('sprint',null,true,'practice');
   }catch(e){toast(e.message,true);}
 }
@@ -96,8 +110,8 @@ async function begin(mode,topicId,textOnly,type){
   try{
     allowText=textOnly;
     if(!textOnly)await prepareMic();
-    const daily=mode==='sprint'?await api('/api/sprint',settings):null;
-    if(daily?.session?.status==='completed')throw Error('今日任务已经完成。');
+    const daily=mode==='sprint'?await api('/api/sprint',{...settings,day:sprint.day}):null;
+    if(daily?.session?.status==='completed')throw Error('这一天的任务已经完成。');
     const plan=daily?daily.plan:await api('/api/plan',{...settings,mode,topicId,type});
     engine=mode==='sprint'?new SprintEngine(plan,{...settings,speechDriven:false}):new ExamEngine(plan,{...settings,usage:mode==='full'?examUsage:usage,speechDriven:!textOnly});finishing=false;recognitionBlocked=false;endingDecision=false;
     const selection=mode==='full'?[...plan.part1.slice(0,3).flatMap(t=>t.questions.map(q=>q.id)),plan.part2.id,...plan.part2.part3.map(q=>q.id)]:[];
@@ -316,7 +330,7 @@ async function finishSession(){
   }
   session.status=engine.reason==='completed'?'completed':'interrupted';session.finished=Date.now()/1000;
   const closing=engine.reason==='completed'&&!engine.isPractice?'Thank you. That is the end of the speaking test.':'This practice session has ended. Thank you.';
-  $('#question').textContent=closing;$('#cue-bullets').innerHTML='';$('#exam-title').textContent=session.mode==='sprint'?(session.status==='completed'?'今日任务完成':'今日任务已保存'):session.mode==='full'?'考试结束':'练习结束';
+  $('#question').textContent=closing;$('#cue-bullets').innerHTML='';$('#exam-title').textContent=session.mode==='sprint'?(session.status==='completed'?`第 ${session.sprintDay} 天任务完成`:'任务已保存'):session.mode==='full'?'考试结束':'练习结束';
   $('#next').disabled=true;$('#repeat').disabled=true;$('#phase-clock').textContent='完成';
   await Promise.allSettled([...recordingJobs,speak(closing,generation)]);
   try{await persist();await refresh();go('history');showReview(history.find(s=>s.id===session.id)||snapshot(),true);}
@@ -328,14 +342,16 @@ function showReview(s,justFinished=false){
   const audioCount=s.events.filter(e=>e.audio).length;
   const wordCount=s.events.reduce((n,e)=>n+(e.answer.match(/\b[a-zA-Z]+\b/g)||[]).length,0);
   const hasPending=s.events.some(e=>e.audioPending);
-  modal(`<p class="eyebrow">${justFinished?'WELL DONE. TAKE A BREATH.':'YOUR PRACTICE, REVISITED.'}</p><h2 class="modal-title">${s.mode==='sprint'?(s.status==='completed'?'今日任务完成 ✓':'今日任务已保存，下次继续。'):s.status==='completed'?'又完成了一次开口。':'这次练习，也值得留下。'}</h2><p class="modal-sub">${date(s.started)} · ${s.mode==='sprint'?`Shy 十天冲刺 · 第 ${s.sprintDay} 天`:s.mode==='full'?`模拟考试 · ${s.type==='practice'?'手动下一题':'官方计时'}`:'题库练习'} · ${s.status==='completed'?'已完成':'未完成'}${s.recording?'':' · 字幕模式，未录音'}</p><div class="summary-grid"><div><strong>${fmt(s.elapsed||0)}</strong><small>练习时长</small></div><div><strong>${answered.length}</strong><small>本场已回答</small></div><div><strong>${audioCount}</strong><small>已保存录音</small></div></div><p class="review-note">${wordCount?`转写共 ${wordCount} 个英语单词。转写可能有误，可以结合录音复盘。`:'本次没有保存回答文字，可以直接回听录音。'} 此版本记录练习过程，不提供自动雅思分数。<br>${s.mode==='full'?(s.status==='completed'?'本场仅计入整套完成进度，不改变单题已练。':'本场仅计入整套抽到次数，不计入整套完成或单题已练。'):'本场实际完成的小题计入单题练习进度，不改变整套抽题记录。'}</p>${hasPending?'<div class="error-banner">部分录音仍在浏览器备份中。<button id="retry-audio" class="text-button">点击重试保存录音 ↗</button></div>':''}<div class="modal-actions"><button id="export-session" class="button secondary">导出本场文字记录</button>${justFinished?'<button id="back-home" class="button primary">回到练习首页 →</button>':''}</div>${s.notes?`<div class="review-note" style="margin-top:22px"><b>Part 2 笔记</b><br>${escape(s.notes).replace(/\n/g,'<br>')}</div>`:''}${s.events.map(e=>`<article class="review-event"><div class="review-meta">${escape(stageLabel(e.stage))} · ${escape(e.topic)} · ${e.kind==='supplement'?'补充追问':e.kind==='bank'||e.kind==='card'?'题库原题':'流程用语'} · ${fmt(e.duration||0)}${e.interrupted?' · 考官控制进度打断':e.advanceReason==='answer-finished'?' · 回答结束后接题':''}${e.answered?'':' · 仅展示'}</div><strong lang="en">${escape(e.stage==='talk'?bank.topics.find(t=>t.id===e.topicId)?.prompt||e.text:e.text)}</strong>${e.bullets?.length?`<p lang="en">${e.bullets.map(escape).join('<br>')}</p>`:''}<p lang="en">${escape(e.answer||'未保存转写文字')}</p>${e.audio?`<audio controls preload="none" src="${escape(e.audio)}"></audio>`:''}</article>`).join('')}`);
+  const next=s.mode==='sprint'&&s.status==='completed'?nextSprintDay(s.sprintDay):null;
+  modal(`<p class="eyebrow">${justFinished?'WELL DONE. TAKE A BREATH.':'YOUR PRACTICE, REVISITED.'}</p><h2 class="modal-title">${s.mode==='sprint'?(s.status==='completed'?`第 ${s.sprintDay} 天任务完成 ✓`:'任务已保存，下次继续。'):s.status==='completed'?'又完成了一次开口。':'这次练习，也值得留下。'}</h2><p class="modal-sub">${date(s.started)} · ${s.mode==='sprint'?`Shy 十天冲刺 · 第 ${s.sprintDay} 天`:s.mode==='full'?`模拟考试 · ${s.type==='practice'?'手动下一题':'官方计时'}`:'题库练习'} · ${s.status==='completed'?'已完成':'未完成'}${s.recording?'':' · 字幕模式，未录音'}</p><div class="summary-grid"><div><strong>${fmt(s.elapsed||0)}</strong><small>练习时长</small></div><div><strong>${answered.length}</strong><small>本场已回答</small></div><div><strong>${audioCount}</strong><small>已保存录音</small></div></div><p class="review-note">${wordCount?`转写共 ${wordCount} 个英语单词。转写可能有误，可以结合录音复盘。`:'本次没有保存回答文字，可以直接回听录音。'} 此版本记录练习过程，不提供自动雅思分数。<br>${s.mode==='full'?(s.status==='completed'?'本场仅计入整套完成进度，不改变单题已练。':'本场仅计入整套抽到次数，不计入整套完成或单题已练。'):'本场实际完成的小题计入单题练习进度，不改变整套抽题记录。'}</p>${hasPending?'<div class="error-banner">部分录音仍在浏览器备份中。<button id="retry-audio" class="text-button">点击重试保存录音 ↗</button></div>':''}<div class="modal-actions"><button id="export-session" class="button secondary">导出本场文字记录</button>${next?`<button id="sprint-next" class="button primary">练第 ${next} 天 →</button>`:''}${justFinished?'<button id="back-home" class="button primary">回到练习首页 →</button>':''}</div>${s.notes?`<div class="review-note" style="margin-top:22px"><b>Part 2 笔记</b><br>${escape(s.notes).replace(/\n/g,'<br>')}</div>`:''}${s.events.map(e=>`<article class="review-event"><div class="review-meta">${escape(stageLabel(e.stage))} · ${escape(e.topic)} · ${e.kind==='supplement'?'补充追问':e.kind==='bank'||e.kind==='card'?'题库原题':'流程用语'} · ${fmt(e.duration||0)}${e.interrupted?' · 考官控制进度打断':e.advanceReason==='answer-finished'?' · 回答结束后接题':''}${e.answered?'':' · 仅展示'}</div><strong lang="en">${escape(e.stage==='talk'?bank.topics.find(t=>t.id===e.topicId)?.prompt||e.text:e.text)}</strong>${e.bullets?.length?`<p lang="en">${e.bullets.map(escape).join('<br>')}</p>`:''}<p lang="en">${escape(e.answer||'未保存转写文字')}</p>${e.audio?`<audio controls preload="none" src="${escape(e.audio)}"></audio>`:''}</article>`).join('')}`);
   $('#export-session').onclick=()=>download(s,`口语练习-${new Date(s.started*1000).toISOString().slice(0,10)}.json`);
+  if(next)$('#sprint-next').onclick=()=>sprintPrompt(next);
   if($('#back-home'))$('#back-home').onclick=()=>{closeModal();go('home');};
   if($('#retry-audio'))$('#retry-audio').onclick=async()=>{try{await retryAudio();showReview(history.find(h=>h.id===s.id));}catch(e){toast(e.message,true);}};
 }
 function download(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function readProgress(boot){$('#quit-app').classList.toggle('hidden',!boot.desktop);sprint=boot.sprint||{};usage=boot.usage;examUsage=boot.examUsage||{};examTopics=boot.examTopics||{};}
-async function refresh(){const boot=await api('/api/bootstrap');readProgress(boot);history=await api('/api/history');renderHome();}
+async function refresh(){const boot=await api('/api/bootstrap');readProgress(boot);history=await api('/api/history');await loadSprint();renderHome();}
 
 $('#modal-close').onclick=closeModal;
 $('#quit-app').onclick=async()=>{
@@ -348,7 +364,7 @@ $$('[data-route]').forEach(el=>el.onclick=()=>go(el.dataset.route));
 $('.brand').onclick=e=>{e.preventDefault();go('home');};
 $('#start-full').onclick=()=>startPrompt('full',null,'exam');
 $('#start-practice').onclick=()=>go('bank');
-$('#start-sprint').onclick=sprintPrompt;$('#nav-sprint').onclick=sprintPrompt;
+$('#start-sprint').onclick=()=>sprintPrompt();$('#nav-sprint').onclick=()=>sprintPrompt();
 $$('[data-part]').forEach(el=>el.onclick=()=>{partFilter=Number(el.dataset.part);$$('[data-part]').forEach(b=>b.classList.toggle('active',b===el));renderBank();});
 $('#bank-search').oninput=renderBank;$('#bank-progress').onchange=renderBank;
 $('#settings-form').onsubmit=e=>{e.preventDefault();settings=readSettings();localStorage.setItem('speaking-settings',JSON.stringify(settings));renderHome();toast('设置已保存。');};
@@ -375,7 +391,7 @@ async function init(){
       if(!existing||(existing.status!=='completed'&&draft.events.length>=existing.events.length)){draft.status=draft.status==='completed'?'completed':'interrupted';await api('/api/session',draft);localStorage.removeItem('speaking-active');history=await api('/api/history');readProgress(await api('/api/bootstrap'));toast('已恢复上次练习记录，保存在“练习记录”中。',true);}
       else localStorage.removeItem('speaking-active');
     }
-    renderHome();renderSettings();
+    await loadSprint();renderHome();renderSettings();
   }catch(e){$('#home').insertAdjacentHTML('afterbegin',`<div class="error-banner">启动未完成：${escape(e.message)}。请关闭窗口后，重新双击“启动雅思口语模拟”。</div>`);$('#start-full').disabled=true;}
 }
 init();
